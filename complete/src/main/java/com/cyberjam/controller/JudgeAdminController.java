@@ -30,6 +30,13 @@ public class JudgeAdminController {
             // Deserialize the list of judges
             List<Judge> judges = objectMapper.convertValue(constants.get("judges"), new TypeReference<List<Judge>>() {});
 
+        // Check if a judge with the same judgeId already exists
+        boolean judgeExists = judges.stream()
+        .anyMatch(judge -> judge.getJudgeId().equals(newJudge.getJudgeId()));
+
+        if (judgeExists) {
+            return new ResponseEntity<>("Judge with this ID already exists", HttpStatus.CONFLICT);
+        }
             // Add the new judge to the list
             judges.add(newJudge);
 
@@ -77,6 +84,45 @@ public class JudgeAdminController {
             return new ResponseEntity<>(judges, HttpStatus.OK);
         } catch (IOException e) {
             return new ResponseEntity<>("Failed to read constants file", HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+    
+    
+    @PutMapping("/judges/{judgeId}")
+    public ResponseEntity<String> updateJudge(@PathVariable String judgeId, @RequestBody Judge updatedJudge) {
+        try {
+            // Read the existing data from the constants file
+            File file = new File(CONSTANTS_FILE_PATH);
+            Map<String, Object> constants = objectMapper.readValue(file, Map.class);
+    
+            // Deserialize the list of judges
+            List<Judge> judges = objectMapper.convertValue(constants.get("judges"), new TypeReference<List<Judge>>() {});
+    
+            // Find and update the judge
+            boolean updated = false;
+            for (int i = 0; i < judges.size(); i++) {
+                if (judgeId.equals(judges.get(i).getJudgeId())) {
+                    // Preserve the original judgeId
+                    updatedJudge.setJudgeId(judgeId);
+                    judges.set(i, updatedJudge);
+                    updated = true;
+                    break;
+                }
+            }
+    
+            if (!updated) {
+                return new ResponseEntity<>("Judge not found", HttpStatus.NOT_FOUND);
+            }
+    
+            // Update the constants map
+            constants.put("judges", judges);
+    
+            // Write the updated list back to the constants file
+            objectMapper.writeValue(file, constants);
+    
+            return new ResponseEntity<>("Judge updated successfully", HttpStatus.OK);
+        } catch (IOException e) {
+            return new ResponseEntity<>("Failed to update constants file", HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
