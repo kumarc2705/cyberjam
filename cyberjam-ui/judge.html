@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judge Admin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Judge Admin</h1>
+        <div class="api-section">
+            <h2>Get All Judges</h2>
+            <button onclick="getAllJudges()">Get Judges</button>
+            <pre id="judgesOutput"></pre>
+        </div>
+        <div class="api-section">
+            <h2>Add Judge</h2>
+            <form id="addJudgeForm">
+                <input type="text" id="judgeId" placeholder="Judge ID" required>
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="text" id="experience" placeholder="Experience" required>
+                <input type="text" id="role" placeholder="Role" required>
+                <textarea id="description" placeholder="Description" required></textarea>
+                <h3>Role Weightages</h3>
+                <input type="number" id="weightSoftware" placeholder="Software Weight" value="0" required>
+                <input type="number" id="weightHardware" placeholder="Hardware Weight" value="0" required>
+                <input type="number" id="weightVisualArt" placeholder="Visual Art Weight" value="0" required>
+                <input type="number" id="weightMusic" placeholder="Music Weight" value="0" required>
+                <input type="number" id="weightWildCard" placeholder="Wild Card Weight" value="0" required>
+                <h3>Theme Weightages</h3>
+                <input type="number" id="weightAi" placeholder="AI Weight" value="0" required>
+                <input type="number" id="weightFashion" placeholder="Fashion Weight" value="0" required>
+                <input type="number" id="weightGovernance" placeholder="Governance Weight" value="0" required>
+                <input type="number" id="weightSportsGaming" placeholder="Sports & Gaming Weight" value="0" required>
+                <input type="number" id="weightSecurityPrivacy" placeholder="Security & Privacy Weight" value="0" required>
+                <button type="submit">Add Judge</button>
+            </form>
+            <pre id="addJudgeOutput"></pre>
+        </div>
+        <div class="api-section">
+            <h2>Remove Judge</h2>
+            <input type="text" id="removeJudgeId" placeholder="Judge ID" required>
+            <button onclick="removeJudge()">Remove Judge</button>
+            <pre id="removeJudgeOutput"></pre>
+        </div>
+        <div class="api-section">
+            <h2>Update Judge</h2>
+            <form id="updateJudgeForm">
+                <input type="text" id="updateJudgeId" placeholder="Judge ID" required>
+                <input type="text" id="updateName" placeholder="Name" required>
+                <input type="text" id="updateExperience" placeholder="Experience" required>
+                <input type="text" id="updateRole" placeholder="Role" required>
+                <textarea id="updateDescription" placeholder="Description" required></textarea>
+                <h3>Role Weightages</h3>
+                <input type="number" id="weightSoftware" placeholder="Software Weight" value="0" required>
+                <input type="number" id="weightHardware" placeholder="Hardware Weight" value="0" required>
+                <input type="number" id="weightVisualArt" placeholder="Visual Art Weight" value="0" required>
+                <input type="number" id="weightMusic" placeholder="Music Weight" value="0" required>
+                <input type="number" id="weightWildCard" placeholder="Wild Card Weight" value="0" required>
+                <h3>Theme Weightages</h3>
+                <input type="number" id="weightAi" placeholder="AI Weight" value="0" required>
+                <input type="number" id="weightFashion" placeholder="Fashion Weight" value="0" required>
+                <input type="number" id="weightGovernance" placeholder="Governance Weight" value="0" required>
+                <input type="number" id="weightSportsGaming" placeholder="Sports & Gaming Weight" value="0" required>
+                <input type="number" id="weightSecurityPrivacy" placeholder="Security & Privacy Weight" value="0" required>
+                <button type="submit">Update Judge</button>
+            </form>
+            <pre id="updateJudgeOutput"></pre>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

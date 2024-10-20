@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scores View</title>
+    <link rel="stylesheet" href="scstyles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Scores View</h1>
+        <div class="api-section">
+            <h2>Assign Scores</h2>
+            <form id="assignScoresForm">
+                <input type="text" id="assignTeamId" placeholder="Team ID" required>
+                <input type="text" id="assignJudgeId" placeholder="Judge ID" required>
+                <h3>Role Scores</h3>
+                <input type="number" id="assignSoftwareScore" placeholder="Software Score" value="0" required>
+                <input type="number" id="assignHardwareScore" placeholder="Hardware Score" value="0" required>
+                <input type="number" id="assignVisualArtScore" placeholder="Visual Art Score" value="0" required>
+                <input type="number" id="assignMusicScore" placeholder="Music Score" value="0" required>
+                <input type="number" id="assignWildCardScore" placeholder="Wild Card Score" value="0" required>
+                <h3>Theme Scores</h3>
+                <input type="number" id="assignAiScore" placeholder="AI Score" value="0" required>
+                <input type="number" id="assignFashionScore" placeholder="Fashion Score" value="0" required>
+                <input type="number" id="assignGovernanceScore" placeholder="Governance Score" value="0" required>
+                <input type="number" id="assignSportsGamingScore" placeholder="Sports & Gaming Score" value="0" required>
+                <input type="number" id="assignSecurityPrivacyScore" placeholder="Security & Privacy Score" value="0" required>
+                <button type="submit">Assign Scores</button>
+            </form>
+            <pre id="assignScoresOutput"></pre>
+        </div>
+        <div class="api-section">
+            <h2>Update Role Score</h2>
+            <form id="updateRoleScoreForm">
+                <input type="text" id="updateRoleTeamId" placeholder="Team ID" required>
+                <input type="text" id="updateRoleJudgeId" placeholder="Judge ID" required>
+                <input type="number" id="updateSoftwareScore" placeholder="Software Score" value="0" required>
+                <input type="number" id="updateHardwareScore" placeholder="Hardware Score" value="0" required>
+                <input type="number" id="updateVisualArtScore" placeholder="Visual Art Score" value="0" required>
+                <input type="number" id="updateMusicScore" placeholder="Music Score" value="0" required>
+                <input type="number" id="updateWildCardScore" placeholder="Wild Card Score" value="0" required>
+                <button type="submit">Update Role Score</button>
+            </form>
+            <pre id="updateRoleScoreOutput"></pre>
+        </div>
+        <div class="api-section">
+            <h2>Update Theme Score</h2>
+            <form id="updateThemeScoreForm">
+                <input type="text" id="updateThemeTeamId" placeholder="Team ID" required>
+                <input type="text" id="updateThemeJudgeId" placeholder="Judge ID" required>
+                <input type="number" id="updateAiScore" placeholder="AI Score" value="0" required>
+                <input type="number" id="updateFashionScore" placeholder="Fashion Score" value="0" required>
+                <input type="number" id="updateGovernanceScore" placeholder="Governance Score" value="0" required>
+                <input type="number" id="updateSportsGamingScore" placeholder="Sports & Gaming Score" value="0" required>
+                <input type="number" id="updateSecurityPrivacyScore" placeholder="Security & Privacy Score" value="0" required>
+                <button type="submit">Update Theme Score</button>
+            </form>
+            <pre id="updateThemeScoreOutput"></pre>
+        </div>
+    </div>
+    <script src="scscripts.js"></script>
+</body>
+</html>

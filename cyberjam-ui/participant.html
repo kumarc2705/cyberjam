@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participant Admin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Participant Admin</h1>
+        <div class="api-section">
+            <h2>Get All Participants</h2>
+            <button onclick="getAllParticipants()">Get Participants</button>
+            <pre id="participantsOutput"></pre>
+        </div>
+        <div class="api-section">
+            <h2>Add Participant</h2>
+            <form id="addParticipantForm">
+                <input type="text" id="participantId" placeholder="Participant ID" required>
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="text" id="experience" placeholder="Experience" required>
+                <input type="text" id="role" placeholder="Role" required>
+                <textarea id="description" placeholder="Description" required></textarea>
+                <button type="submit">Add Participant</button>
+            </form>
+            <pre id="addParticipantOutput"></pre>
+        </div>
+        <div class="api-section">
+            <h2>Remove Participant</h2>
+            <input type="text" id="removeParticipantId" placeholder="Participant ID" required>
+            <button onclick="removeParticipant()">Remove Participant</button>
+            <pre id="removeParticipantOutput"></pre>
+        </div>
+        <div class="api-section">
+            <h2>Update Participant</h2>
+            <form id="updateParticipantForm">
+                <input type="text" id="updateParticipantId" placeholder="Participant ID" required>
+                <input type="text" id="updateName" placeholder="Name" required>
+                <input type="text" id="updateExperience" placeholder="Experience" required>
+                <input type="text" id="updateRole" placeholder="Role" required>
+                <textarea id="updateDescription" placeholder="Description" required></textarea>
+                <button type="submit">Update Participant</button>
+            </form>
+            <pre id="updateParticipantOutput"></pre>
+        </div>
+    </div>
+    <script src="pscripts.js"></script>
+</body>
+</html>

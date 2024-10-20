@@ -171,7 +171,7 @@ public class TeamAdminController {
     }
 
     @DeleteMapping("/delete-team-with-id")
-    public ResponseEntity<String> deleteTeamWithId(@RequestParam("id") String teamId) {
+    public ResponseEntity<String> deleteTeamWithId(@RequestParam String id) {
         try {
             // Read the existing data from the constants file
             File file = new File(CONSTANTS_FILE_PATH);
@@ -180,20 +180,27 @@ public class TeamAdminController {
             // Deserialize the list of teams
             List<Team> teams = objectMapper.convertValue(constants.get("teams"), new TypeReference<List<Team>>() {});
 
-            // Remove the team by ID
-            boolean removed = teams.removeIf(team -> teamId.equals(team.getId()));
+            // Remove the team with the specified ID
+            List<Team> updatedTeams = teams.stream()
+                    .filter(team -> !id.equals(team.getId()))
+                    .collect(Collectors.toList());
 
-            if (!removed) {
-                return new ResponseEntity<>("Team not found", HttpStatus.NOT_FOUND);
-            }
+            // Deserialize the list of team scores
+            List<TeamScoreView> teamScores = objectMapper.convertValue(constants.get("teamScores"), new TypeReference<List<TeamScoreView>>() {});
+
+            // Remove the team scores for the specified team ID
+            List<TeamScoreView> updatedTeamScores = teamScores.stream()
+                    .filter(teamScore -> !id.equals(teamScore.getTeamId()))
+                    .collect(Collectors.toList());
 
             // Update the constants map
-            constants.put("teams", teams);
+            constants.put("teams", updatedTeams);
+            constants.put("teamScores", updatedTeamScores);
 
             // Write the updated list back to the constants file
             objectMapper.writeValue(file, constants);
 
-            return new ResponseEntity<>("Team deleted successfully", HttpStatus.OK);
+            return new ResponseEntity<>("Team and its scores deleted successfully", HttpStatus.OK);
         } catch (IOException e) {
             return new ResponseEntity<>("Failed to update constants file", HttpStatus.INTERNAL_SERVER_ERROR);
         }

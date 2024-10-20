@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Admin</title>
+    <link rel="stylesheet" href="teamstyles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Team Admin</h1>
+        <div class="api-section">
+            <h2>Get All Teams</h2>
+            <button onclick="getAllTeams()">Get Teams</button>
+            <pre id="teamsOutput"></pre>
+        </div>
+        <div class="api-section">
+            <h2>Add Team</h2>
+            <form id="addTeamForm">
+                <input type="text" id="teamId" placeholder="Team ID" required>
+                <input type="text" id="teamName" placeholder="Team Name" required>
+                <textarea id="participantIds" placeholder="Participant IDs (comma-separated)" required></textarea>
+                <button type="submit">Add Team</button>
+            </form>
+            <pre id="addTeamOutput"></pre>
+        </div>
+        <div class="api-section">
+            <h2>Get Team Info by ID</h2>
+            <input type="text" id="getTeamId" placeholder="Team ID" required>
+            <button onclick="getTeamInfoById()">Get Team Info</button>
+            <pre id="getTeamInfoOutput"></pre>
+        </div>
+        <div class="api-section">
+            <h2>Update Team by ID</h2>
+            <form id="updateTeamForm">
+                <input type="text" id="updateTeamId" placeholder="Team ID" required>
+                <input type="text" id="updateTeamName" placeholder="Team Name" required>
+                <button type="submit">Update Team</button>
+            </form>
+            <pre id="updateTeamOutput"></pre>
+        </div>
+        <div class="api-section">
+            <h2>Delete Team by ID</h2>
+            <input type="text" id="deleteTeamId" placeholder="Team ID" required>
+            <button onclick="deleteTeamById()">Delete Team</button>
+            <pre id="deleteTeamOutput"></pre>
+        </div>
+        <div class="api-section">
+            <h2>Add Member to Team</h2>
+            <form id="addMemberToTeamForm">
+                <input type="text" id="addMemberTeamId" placeholder="Team ID" required>
+                <input type="text" id="addMemberParticipantId" placeholder="Participant ID" required>
+                <button type="submit">Add Member</button>
+            </form>
+            <pre id="addMemberToTeamOutput"></pre>
+        </div>
+        <div class="api-section">
+            <h2>Remove Member from Team</h2>
+            <form id="removeMemberFromTeamForm">
+                <input type="text" id="removeMemberTeamId" placeholder="Team ID" required>
+                <input type="text" id="removeMemberParticipantId" placeholder="Participant ID" required>
+                <button type="submit">Remove Member</button>
+            </form>
+            <pre id="removeMemberFromTeamOutput"></pre>
+        </div>
+    </div>
+    <script src="teamscripts.js"></script>
+</body>
+</html>
