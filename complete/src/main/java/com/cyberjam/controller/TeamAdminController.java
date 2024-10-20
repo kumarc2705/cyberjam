@@ -3,7 +3,6 @@ import java.util.ArrayList;
 import java.util.List;
 import com.cyberjam.model.Participant;
 import com.cyberjam.model.Team;
-import com.cyberjam.model.TeamScoreView;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.http.HttpStatus;
@@ -19,7 +18,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import com.cyberjam.service.TeamService;
-import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/team-admin")
 public class TeamAdminController {
