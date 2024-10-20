@@ -58,17 +58,30 @@ public class TeamService {
     }
 
     public boolean addMemberToTeam(String teamId, Participant participant) {
-        if (participants.stream().noneMatch(p -> p.getParticipantId().equals(participant.getParticipantId()))) {
-            return false; // Participant not found in the participants list
-        }
+        try {
+            // Read the existing data from the constants file
+            File file = new File(CONSTANTS_FILE_PATH);
+            Map<String, Object> constants = objectMapper.readValue(file, Map.class);
 
-        Team team = teams.get(teamId);
-        if (team != null) {
-            team.addMember(participant);
-            saveTeams();
-            return true;
+            // Deserialize the list of teams
+            List<Team> teams = objectMapper.convertValue(constants.get("teams"), new TypeReference<List<Team>>() {});
+
+            // Find the team by ID and add the participant
+            for (Team team : teams) {
+                if (teamId.equals(team.getId())) {
+                    team.addMember(participant);
+                    // Update the constants map
+                    constants.put("teams", teams);
+                    // Write the updated list back to the constants file
+                    objectMapper.writeValue(file, constants);
+                    return true;
+                }
+            }
+            return false;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
         }
-        return false;
     }
 
     private void saveTeams() {

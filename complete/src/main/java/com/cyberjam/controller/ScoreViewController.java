@@ -1,5 +1,4 @@
 package com.cyberjam.controller;
-
 import com.cyberjam.model.TeamRoleScore;
 import com.cyberjam.model.TeamThemeScore;
 import com.cyberjam.model.TeamScoreView;
@@ -35,21 +34,14 @@ public class ScoreViewController {
         return new ResponseEntity<>(apis, HttpStatus.OK);
     }
 
-    @PostMapping("/assign-scores")
-    public ResponseEntity<String> assignScores(@RequestBody TeamScoreView newScore) {
+    @PostMapping("/assign-score")
+    public ResponseEntity<String> assignScores(@RequestParam String teamId,
+                                               @RequestParam String judgeId,
+                                               @RequestBody Map<String, Object> scores) {
         try {
             // Read the existing data from the constants file
             File file = new File(CONSTANTS_FILE_PATH);
             Map<String, Object> constants = objectMapper.readValue(file, Map.class);
-
-            // Deserialize the list of teams
-            List<Map<String, Object>> teams = objectMapper.convertValue(constants.get("teams"), new TypeReference<List<Map<String, Object>>>() {});
-
-            // Check if the team exists
-            boolean teamExists = teams.stream().anyMatch(team -> newScore.getTeamId().equals(team.get("id")));
-            if (!teamExists) {
-                return new ResponseEntity<>("Team not found", HttpStatus.NOT_FOUND);
-            }
 
             // Deserialize the list of team scores
             List<TeamScoreView> teamScores = objectMapper.convertValue(constants.get("teamScores"), new TypeReference<List<TeamScoreView>>() {});
@@ -58,9 +50,63 @@ public class ScoreViewController {
             if (teamScores == null) {
                 teamScores = new ArrayList<>();
             }
+            // Deserialize the list of judges
+            List<Map<String, Object>> judges = objectMapper.convertValue(constants.get("judges"), new TypeReference<List<Map<String, Object>>>() {});
 
-            // Add the new score to the list
-            teamScores.add(newScore);
+            // Check if the judgeId exists in the judges list
+            boolean judgeExists = judges.stream().anyMatch(judge -> judgeId.equals(judge.get("judgeId")));
+            if (!judgeExists) {
+                return new ResponseEntity<>("Judge not found", HttpStatus.NOT_FOUND);
+            }
+            // Convert the scores map to TeamRoleScore and TeamThemeScore objects
+            TeamRoleScore roleScores = objectMapper.convertValue(scores.get("roleScores"), TeamRoleScore.class);
+            TeamThemeScore themeScores = objectMapper.convertValue(scores.get("themeScores"), TeamThemeScore.class);
+
+            // Find the team score by teamId and update the role and theme scores for the specified judge
+            boolean scoreUpdated = false;
+            for (TeamScoreView teamScore : teamScores) {
+                if (teamId.equals(teamScore.getTeamId())) {
+                    Map<String, JudgeScoreView> judgeScores = teamScore.getJudgeScores();
+                    if (judgeScores == null) {
+                        judgeScores = new HashMap<>();
+                        teamScore.setJudgeScores(judgeScores);
+                    }
+                    JudgeScoreView judgeScore = judgeScores.get(judgeId);
+                    if (judgeScore == null) {
+                        judgeScore = new JudgeScoreView();
+                        judgeScores.put(judgeId, judgeScore);
+                    }
+                    judgeScore.setRoleScore(roleScores);
+                    judgeScore.setThemeScore(themeScores);
+                    scoreUpdated = true;
+                    break;
+                }
+            }
+
+            // If the teamId does not exist in teamScores, create a new TeamScoreView for that team
+            if (!scoreUpdated) {
+                // Check if the teamId exists in the team list
+                List<Map<String, Object>> teams = objectMapper.convertValue(constants.get("teams"), new TypeReference<List<Map<String, Object>>>() {});
+                boolean teamExists = teams.stream().anyMatch(team -> teamId.equals(team.get("id")));
+
+                if (teamExists) {
+                    TeamScoreView newTeamScore = new TeamScoreView();
+                    newTeamScore.setTeamId(teamId);
+                    Map<String, JudgeScoreView> judgeScores = new HashMap<>();
+                    JudgeScoreView judgeScore = new JudgeScoreView();
+                    judgeScore.setRoleScore(roleScores);
+                    judgeScore.setThemeScore(themeScores);
+                    judgeScore.setJudgeId(judgeId);
+                    judgeScores.put(judgeId, judgeScore);
+                    newTeamScore.setJudgeScores(judgeScores);
+                    teamScores.add(newTeamScore);
+                    scoreUpdated = true;
+                }
+            }
+
+            if (!scoreUpdated) {
+                return new ResponseEntity<>("Team or Judge not found", HttpStatus.NOT_FOUND);
+            }
 
             // Update the constants map
             constants.put("teamScores", teamScores);
@@ -68,11 +114,12 @@ public class ScoreViewController {
             // Write the updated list back to the constants file
             objectMapper.writeValue(file, constants);
 
-            return new ResponseEntity<>("Scores assigned successfully", HttpStatus.OK);
+            return new ResponseEntity<>("Scores updated successfully", HttpStatus.OK);
         } catch (IOException e) {
             return new ResponseEntity<>("Failed to update constants file", HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
 
     @PutMapping("/update-role-score")
     public ResponseEntity<String> updateRoleScore(@RequestParam("teamId") String teamId, @RequestParam("judgeId") String judgeId, @RequestBody TeamRoleScore newRoleScore) {

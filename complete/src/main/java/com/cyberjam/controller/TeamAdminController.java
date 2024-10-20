@@ -43,7 +43,9 @@ public class TeamAdminController {
     }
 
     @PostMapping("/add-team")
-    public ResponseEntity<String> addTeam(@RequestBody Team newTeam) {
+    public ResponseEntity<String> addTeam(@RequestParam String teamId,
+                                          @RequestParam String teamName,
+                                          @RequestBody List<String> participantIds) {
         try {
             File file = new File(CONSTANTS_FILE_PATH);
             Map<String, Object> constants;
@@ -54,7 +56,23 @@ public class TeamAdminController {
             } else {
                 constants = new HashMap<>();
                 constants.put("teams", new ArrayList<>());
+                constants.put("participants", new ArrayList<>());
             }
+
+            // Deserialize the list of participants
+            List<Participant> participants = objectMapper.convertValue(constants.get("participants"), new TypeReference<List<Participant>>() {});
+
+            // Find the participants by IDs
+            List<Participant> teamMembers = new ArrayList<>();
+            for (String participantId : participantIds) {
+                Optional<Participant> participantOpt = participants.stream()
+                        .filter(p -> participantId.equals(p.getParticipantId()))
+                        .findFirst();
+                participantOpt.ifPresent(teamMembers::add);
+            }
+
+            // Create a new team
+            Team newTeam = new Team(teamId, teamName, teamMembers);
 
             // Deserialize the list of teams
             List<Team> teams = objectMapper.convertValue(constants.get("teams"), new TypeReference<List<Team>>() {});
@@ -182,12 +200,33 @@ public class TeamAdminController {
     }
 
     @PostMapping("/add-member-to-team")
-    public ResponseEntity<String> addMemberToTeam(@RequestParam("teamId") String teamId, @RequestBody Participant participant) {
-        boolean added = teamService.addMemberToTeam(teamId, participant);
-        if (added) {
-            return new ResponseEntity<>("Participant added to team successfully", HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>("Failed to add participant to team", HttpStatus.BAD_REQUEST);
+    public ResponseEntity<String> addMemberToTeam(@RequestParam("teamId") String teamId, @RequestParam("participantId") String participantId) {
+        try {
+            // Read the existing data from the constants file
+            File file = new File(CONSTANTS_FILE_PATH);
+            Map<String, Object> constants = objectMapper.readValue(file, Map.class);
+
+            // Deserialize the list of participants
+            List<Participant> participants = objectMapper.convertValue(constants.get("participants"), new TypeReference<List<Participant>>() {});
+
+            // Find the participant by ID
+            Optional<Participant> participantOpt = participants.stream()
+                    .filter(p -> participantId.equals(p.getParticipantId()))
+                    .findFirst();
+
+            if (participantOpt.isPresent()) {
+                Participant participant = participantOpt.get();
+                boolean added = teamService.addMemberToTeam(teamId, participant);
+                if (added) {
+                    return new ResponseEntity<>("Participant added to team successfully", HttpStatus.OK);
+                } else {
+                    return new ResponseEntity<>("Failed to add participant to team", HttpStatus.BAD_REQUEST);
+                }
+            } else {
+                return new ResponseEntity<>("Participant not found", HttpStatus.NOT_FOUND);
+            }
+        } catch (IOException e) {
+            return new ResponseEntity<>("Failed to read constants file", HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
