@@ -1,4 +1,6 @@
-const apiUrl = 'http://localhost:8080/judge-admin';
+import config from './config.js';
+
+const apiUrl = `${config.apiUrl}/judge-admin`;
 
 async function getAllJudges() {
     try {

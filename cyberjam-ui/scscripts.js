@@ -1,4 +1,6 @@
-const apiUrl = 'http://localhost:8080/score-view';
+import config from './config.js';
+
+const apiUrl = `${config.apiUrl}/score-view`;
 
 document.getElementById('assignScoresForm').addEventListener('submit', async (event) => {
     event.preventDefault();
