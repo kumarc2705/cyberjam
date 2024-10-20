@@ -21,18 +21,18 @@ document.getElementById('addJudgeForm').addEventListener('submit', async (event)
         role: document.getElementById('role').value,
         description: document.getElementById('description').value,
         roleWeightage: {
-            softwareWeight: parseFloat(document.getElementById('weightSoftware').value),
-            hardwareWeight: parseFloat(document.getElementById('weightHardware').value),
-            visualArtWeight: parseFloat(document.getElementById('weightVisualArt').value),
-            musicWeight: parseFloat(document.getElementById('weightMusic').value),
-            wildCardWeight: parseFloat(document.getElementById('weightWildCard').value)
+            softwareWeight: parseFloat(document.getElementById('softwareWeight').value),
+            hardwareWeight: parseFloat(document.getElementById('hardwareWeight').value),
+            visualArtWeight: parseFloat(document.getElementById('visualArtWeight').value),
+            musicWeight: parseFloat(document.getElementById('musicWeight').value),
+            wildCardWeight: parseFloat(document.getElementById('wildCardWeight').value)
         },
         themeWeightage: {
-            aiWeight: parseFloat(document.getElementById('weightAi').value),
-            fashionWeight: parseFloat(document.getElementById('weightFashion').value),
-            governanceWeight: parseFloat(document.getElementById('weightGovernance').value),
-            sportsGamingWeight: parseFloat(document.getElementById('weightSportsGaming').value),
-            securityPrivacyWeight: parseFloat(document.getElementById('weightSecurityPrivacy').value)
+            aiWeight: parseFloat(document.getElementById('aiWeight').value),
+            fashionWeight: parseFloat(document.getElementById('fashionWeight').value),
+            governanceWeight: parseFloat(document.getElementById('governanceWeight').value),
+            sportsGamingWeight: parseFloat(document.getElementById('sportsGamingWeight').value),
+            securityPrivacyWeight: parseFloat(document.getElementById('securityPrivacyWeight').value)
         }
     };
     try {
@@ -46,14 +46,14 @@ document.getElementById('addJudgeForm').addEventListener('submit', async (event)
         const data = await response.json();
         document.getElementById('addJudgeOutput').textContent = JSON.stringify(data, null, 2);
     } catch (error) {
-        document.getElementById('addJudgeOutput').textContent = 'Error adding judge';
+        document.getElementById('addJudgeOutput').textContent = JSON.stringify(data, null, 2);
     }
 });
 
 async function removeJudge() {
     const judgeId = document.getElementById('removeJudgeId').value;
     try {
-        const response = await fetch(`${apiUrl}/remove-judge?id=${judgeId}`, {
+        const response = await fetch(`${apiUrl}/remove-judge/${judgeId}`, {
             method: 'DELETE'
         });
         const data = await response.text();
@@ -73,22 +73,22 @@ document.getElementById('updateJudgeForm').addEventListener('submit', async (eve
         role: document.getElementById('updateRole').value,
         description: document.getElementById('updateDescription').value,
         roleWeightage: {
-            softwareWeight: parseFloat(document.getElementById('updateWeightSoftware').value),
-            hardwareWeight: parseFloat(document.getElementById('updateWeightHardware').value),
-            visualArtWeight: parseFloat(document.getElementById('updateWeightVisualArt').value),
-            musicWeight: parseFloat(document.getElementById('updateWeightMusic').value),
-            wildCardWeight: parseFloat(document.getElementById('updateWeightWildCard').value)
+            softwareWeight: parseFloat(document.getElementById('updateSoftwareWeight').value),
+            hardwareWeight: parseFloat(document.getElementById('updateHardwareWeight').value),
+            visualArtWeight: parseFloat(document.getElementById('updateVisualArtWeight').value),
+            musicWeight: parseFloat(document.getElementById('updateMusicWeight').value),
+            wildCardWeight: parseFloat(document.getElementById('updateWildCardWeight').value)
         },
         themeWeightage: {
-            aiWeight: parseFloat(document.getElementById('updateWeightAi').value),
-            fashionWeight: parseFloat(document.getElementById('updateWeightFashion').value),
-            governanceWeight: parseFloat(document.getElementById('updateWeightGovernance').value),
-            sportsGamingWeight: parseFloat(document.getElementById('updateWeightSportsGaming').value),
-            securityPrivacyWeight: parseFloat(document.getElementById('updateWeightSecurityPrivacy').value)
+            aiWeight: parseFloat(document.getElementById('updateAiWeight').value),
+            fashionWeight: parseFloat(document.getElementById('updateFashionWeight').value),
+            governanceWeight: parseFloat(document.getElementById('updateGovernanceWeight').value),
+            sportsGamingWeight: parseFloat(document.getElementById('updateSportsGamingWeight').value),
+            securityPrivacyWeight: parseFloat(document.getElementById('updateSecurityPrivacyWeight').value)
         }
     };
     try {
-        const response = await fetch(`${apiUrl}/update-judge`, {
+        const response = await fetch(`${apiUrl}/update-judge/${judgeId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
