@@ -20,7 +20,7 @@ public class JudgeAdminController {
     private static final String CONSTANTS_FILE_PATH = "src/main/resources/constants.json";
     private final ObjectMapper objectMapper = new ObjectMapper();
 
-    @PostMapping
+    @PostMapping("/add-judge")
     public ResponseEntity<String> addJudge(@RequestBody Judge newJudge) {
         try {
             // Read the existing data from the constants file
@@ -53,16 +53,17 @@ public class JudgeAdminController {
     }
 
     @GetMapping
-    public ResponseEntity<Object> getAvailableApis() {
-        String apis = """
-            Available APIs:
-            1. POST /judge-admin - Add a new judge
-            2. GET /judge-admin/judges - Get all judges
-            3. GET /judge-admin/judges?judge={name} - Get judge by name
-            4. DELETE /judge-admin/judges?judge={name} - Delete judge by name
-            """;
-        return new ResponseEntity<>(apis, HttpStatus.OK);
+    public ResponseEntity<Map<String, String>> getAvailableMethods() {
+        Map<String, String> methods = new HashMap<>();
+        methods.put("GET /judge-admin", "Get all available API methods");
+        methods.put("GET /judges", "Get all judges");
+        methods.put("POST /add-judge", "Add a new judge");
+        methods.put("DELETE /remove-judge", "Remove a judge by judgeId");
+        // Add other API methods as needed
+
+        return new ResponseEntity<>(methods, HttpStatus.OK);
     }
+
 
     @GetMapping("/judges")
     public ResponseEntity<Object> getJudges(@RequestParam(value = "judge", required = false) String judgeName) {
@@ -88,7 +89,7 @@ public class JudgeAdminController {
     }
     
     
-    @PutMapping("/judges/{judgeId}")
+    @PutMapping("/update-judge/{judgeId}")
     public ResponseEntity<String> updateJudge(@PathVariable String judgeId, @RequestBody Judge updatedJudge) {
         try {
             // Read the existing data from the constants file
@@ -126,8 +127,8 @@ public class JudgeAdminController {
         }
     }
 
-    @DeleteMapping("/judges")
-    public ResponseEntity<String> deleteJudge(@RequestParam("judgeId") String judgeId) {
+    @DeleteMapping("/remove-judge/{judgeId}")
+    public ResponseEntity<String> deleteJudge(@PathVariable String judgeId) {
         try {
             // Read the existing data from the constants file
             File file = new File(CONSTANTS_FILE_PATH);

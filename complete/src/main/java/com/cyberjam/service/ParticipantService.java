@@ -25,9 +25,14 @@ public class ParticipantService {
     }
 
     public Participant addParticipant(Participant participant) {
-        participants.add(participant);
-        saveParticipants();
-        return participant;
+        boolean exists = participants.stream()
+                .anyMatch(p -> p.getParticipantId().equals(participant.getParticipantId()));
+        if (!exists) {
+            participants.add(participant);
+            saveParticipants();
+            return participant;
+        }
+        return null; // Return null or throw an exception if the participant already exists
     }
 
     public List<Participant> getAllParticipants() {
@@ -62,6 +67,17 @@ public class ParticipantService {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public Participant updateParticipant(String participantId, Participant updatedParticipant) {
+        for (int i = 0; i < participants.size(); i++) {
+            if (participants.get(i).getParticipantId().equals(participantId)) {
+                participants.set(i, updatedParticipant);
+                saveParticipants();
+                return updatedParticipant;
+            }
+        }
+        return null;
     }
 
     public boolean removeParticipant(String participantId) {

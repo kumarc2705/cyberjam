@@ -29,8 +29,18 @@ public class ParticipantController {
         return new ResponseEntity<>(participants, HttpStatus.OK);
     }
 
-    @DeleteMapping("/remove-participant")
-    public ResponseEntity<String> removeParticipant(@RequestParam("participantId") String participantId) {
+    @PutMapping("/update-participant/{participantId}")
+    public ResponseEntity<Participant> updateParticipant(@PathVariable String participantId, @RequestBody Participant updatedParticipant) {
+        Participant participant = participantService.updateParticipant(participantId, updatedParticipant);
+        if (participant != null) {
+            return new ResponseEntity<>(participant, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+    
+    @DeleteMapping("/remove-participant/{participantId}")
+    public ResponseEntity<String> removeParticipant(@PathVariable String participantId) {
         boolean removed = participantService.removeParticipant(participantId);
         if (removed) {
             return new ResponseEntity<>("Participant removed successfully", HttpStatus.OK);
