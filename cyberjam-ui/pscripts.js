@@ -1,6 +1,4 @@
-import config from './config.js';
-
-const apiUrl = `${config.apiUrl}/participant-admin`;
+const apiUrl = 'http://localhost:8080/participant-admin';
 
 async function getAllParticipants() {
     try {

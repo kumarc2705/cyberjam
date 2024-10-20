@@ -1,6 +1,4 @@
-import config from './config.js';
-
-const apiUrl = `${config.apiUrl}/team-admin`;
+const apiUrl = 'http://localhost:8080/team-admin';
 
 async function getAllTeams() {
     try {
