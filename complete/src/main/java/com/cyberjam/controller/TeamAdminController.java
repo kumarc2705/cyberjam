@@ -1,14 +1,14 @@
 package com.cyberjam.controller;
 import java.util.ArrayList;
 import java.util.List;
-import com.cyberjam.model.Person;
+import com.cyberjam.model.Participant;
 import com.cyberjam.model.Team;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import java.io.File;
 import java.io.IOException;
 import java.util.Map;
@@ -17,11 +17,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+import com.cyberjam.service.TeamService;
 @RestController
 @RequestMapping("/team-admin")
 public class TeamAdminController {
 
+    @Autowired
+    private TeamService teamService;
     private static final String CONSTANTS_FILE_PATH = "src/main/resources/constants.json";
     private final ObjectMapper objectMapper = new ObjectMapper();
 
@@ -180,43 +182,17 @@ public class TeamAdminController {
     }
 
     @PostMapping("/add-member-to-team")
-    public ResponseEntity<String> addMemberToTeam(@RequestParam("id") String teamId, @RequestBody Person newMember) {
-        try {
-            // Read the existing data from the constants file
-            File file = new File(CONSTANTS_FILE_PATH);
-            Map<String, Object> constants = objectMapper.readValue(file, Map.class);
-
-            // Deserialize the list of teams
-            List<Team> teams = objectMapper.convertValue(constants.get("teams"), new TypeReference<List<Team>>() {});
-
-            // Find the team by ID and add the new member
-            boolean memberAdded = false;
-            for (Team team : teams) {
-                if (teamId.equals(team.getId())) {
-                    team.addMember(newMember);
-                    memberAdded = true;
-                    break;
-                }
-            }
-
-            if (!memberAdded) {
-                return new ResponseEntity<>("Team not found", HttpStatus.NOT_FOUND);
-            }
-
-            // Update the constants map
-            constants.put("teams", teams);
-
-            // Write the updated list back to the constants file
-            objectMapper.writeValue(file, constants);
-
-            return new ResponseEntity<>("Member added successfully", HttpStatus.OK);
-        } catch (IOException e) {
-            return new ResponseEntity<>("Failed to update constants file", HttpStatus.INTERNAL_SERVER_ERROR);
+    public ResponseEntity<String> addMemberToTeam(@RequestParam("teamId") String teamId, @RequestBody Participant participant) {
+        boolean added = teamService.addMemberToTeam(teamId, participant);
+        if (added) {
+            return new ResponseEntity<>("Participant added to team successfully", HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>("Failed to add participant to team", HttpStatus.BAD_REQUEST);
         }
     }
 
     @DeleteMapping("/remove-member-from-team")
-    public ResponseEntity<String> removeMemberFromTeam(@RequestParam("id") String teamId, @RequestParam("memberName") String memberName) {
+    public ResponseEntity<String> removeMemberFromTeam(@RequestParam("id") String teamId, @RequestParam("participantId") String participantId) {
         try {
             // Read the existing data from the constants file
             File file = new File(CONSTANTS_FILE_PATH);
@@ -229,7 +205,7 @@ public class TeamAdminController {
             boolean memberRemoved = false;
             for (Team team : teams) {
                 if (teamId.equals(team.getId())) {
-                    memberRemoved = team.removeMember(memberName);
+                    memberRemoved = team.removeMember(participantId);
                     break;
                 }
             }

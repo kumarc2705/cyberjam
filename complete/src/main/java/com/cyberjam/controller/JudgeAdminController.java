@@ -127,29 +127,41 @@ public class JudgeAdminController {
     }
 
     @DeleteMapping("/judges")
-    public ResponseEntity<String> deleteJudge(@RequestParam("judge") String judgeName) {
+    public ResponseEntity<String> deleteJudge(@RequestParam("judgeId") String judgeId) {
         try {
             // Read the existing data from the constants file
             File file = new File(CONSTANTS_FILE_PATH);
             Map<String, Object> constants = objectMapper.readValue(file, Map.class);
-
+    
             // Deserialize the list of judges
             List<Judge> judges = objectMapper.convertValue(constants.get("judges"), new TypeReference<List<Judge>>() {});
-
-            // Remove the judge by name
-            boolean removed = judges.removeIf(judge -> judgeName.equals(judge.getName()));
-
+    
+            // Remove the judge by ID
+            boolean removed = judges.removeIf(judge -> judgeId.equals(judge.getJudgeId()));
+    
             if (!removed) {
                 return new ResponseEntity<>("Judge not found", HttpStatus.NOT_FOUND);
             }
-
+    
+            // Deserialize the list of team scores
+            List<Map<String, Object>> teamScores = objectMapper.convertValue(constants.get("teamScores"), new TypeReference<List<Map<String, Object>>>() {});
+    
+            // Remove the scores associated with the judge
+            for (Map<String, Object> teamScore : teamScores) {
+                Map<String, Object> judgeScores = (Map<String, Object>) teamScore.get("judgeScores");
+                if (judgeScores != null) {
+                    judgeScores.remove(judgeId);
+                }
+            }
+    
             // Update the constants map
             constants.put("judges", judges);
-
+            constants.put("teamScores", teamScores);
+    
             // Write the updated list back to the constants file
             objectMapper.writeValue(file, constants);
-
-            return new ResponseEntity<>("Judge deleted successfully", HttpStatus.OK);
+    
+            return new ResponseEntity<>("Judge and associated scores deleted successfully", HttpStatus.OK);
         } catch (IOException e) {
             return new ResponseEntity<>("Failed to update constants file", HttpStatus.INTERNAL_SERVER_ERROR);
         }

@@ -5,14 +5,14 @@ import java.util.List;
 public class Team {
     private String id;
     private String name;
-    private List<Person> members;
+    private List<Participant> members;
     
 
     // Default constructor
     public Team() {}
 
     // Parameterized constructor
-    public Team(String id, String name, List<Person> members) {
+    public Team(String id, String name, List<Participant> members) {
         this.id = id;
         this.name = name;
         this.members = members;
@@ -35,21 +35,25 @@ public class Team {
         this.name = name;
     }
 
-    public List<Person> getMembers() {
+    public List<Participant> getMembers() {
         return members;
     }
 
-    public void setMembers(List<Person> members) {
+    public void setMembers(List<Participant> members) {
         this.members = members;
     }
 
     // Method to add a team member
-    public void addMember(Person member) {
-      this.members.add(member);
-  }
+    public void addMember(Participant participant) {
+        boolean exists = members.stream()
+                .anyMatch(member -> member.getParticipantId().equals(participant.getParticipantId()));
+        if (!exists) {
+            this.members.add(participant);
+        }
+    }
 
   // Method to remove a team member
   public boolean removeMember(String memberName) {
-      return this.members.removeIf(member -> member.getName().equals(memberName));
+      return this.members.removeIf(member -> member.getParticipantId().equals(memberName));
   }
 }
