@@ -1,7 +1,6 @@
 import config from './config.js';
 
 const apiUrl = `${config.apiUrl}/judge-admin`;
-
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('getAllJudgesBtn').addEventListener('click', async () => {
         try {

@@ -18,6 +18,35 @@
                 <li><a href="team-scores.html">Team Scores</a></li>
             </ul>
         </nav>
+        <div class="api-config">
+            <h2>Set API URL</h2>
+            <form id="apiConfigForm">
+                <label for="ipAddress">IP Address</label>
+                <input type="text" id="ipAddress" placeholder="IP Address" value="localhost" required>
+                <label for="port">Port</label>
+                <input type="text" id="port" placeholder="Port" value="8080" required>
+                <button type="submit">Set API URL</button>
+            </form>
+            <pre id="apiConfigOutput"></pre>
+        </div>
     </div>
+    <script>
+        document.getElementById('apiConfigForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const ipAddress = document.getElementById('ipAddress').value;
+            const port = document.getElementById('port').value;
+            const apiUrl = `http://${ipAddress}:${port}`;
+            localStorage.setItem('apiUrl', apiUrl);
+            document.getElementById('apiConfigOutput').textContent = `API URL set to: ${apiUrl}`;
+        });
+
+        // Load existing API URL from local storage if available
+        window.addEventListener('DOMContentLoaded', () => {
+            const storedApiUrl = localStorage.getItem('apiUrl');
+            if (storedApiUrl) {
+                document.getElementById('apiConfigOutput').textContent = `Current API URL: ${storedApiUrl}`;
+            }
+        });
+    </script>
 </body>
 </html>
