@@ -13,10 +13,9 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Map;
 import java.util.Optional;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import com.cyberjam.model.TeamScoreView;
+import java.util.stream.Collectors;
 import com.cyberjam.service.TeamService;
 @RestController
 @RequestMapping("/team-admin")
@@ -59,6 +58,15 @@ public class TeamAdminController {
                 constants.put("participants", new ArrayList<>());
             }
 
+            // Deserialize the list of teams
+            List<Team> teams = objectMapper.convertValue(constants.get("teams"), new TypeReference<List<Team>>() {});
+
+            // Check if a team with the given ID already exists
+            boolean teamExists = teams.stream().anyMatch(team -> teamId.equals(team.getId()));
+            if (teamExists) {
+                return new ResponseEntity<>("Team with ID " + teamId + " already exists", HttpStatus.CONFLICT);
+            }
+
             // Deserialize the list of participants
             List<Participant> participants = objectMapper.convertValue(constants.get("participants"), new TypeReference<List<Participant>>() {});
 
@@ -74,8 +82,6 @@ public class TeamAdminController {
             // Create a new team
             Team newTeam = new Team(teamId, teamName, teamMembers);
 
-            // Deserialize the list of teams
-            List<Team> teams = objectMapper.convertValue(constants.get("teams"), new TypeReference<List<Team>>() {});
 
             // Add the new team to the list
             teams.add(newTeam);

@@ -11,7 +11,7 @@
         <h1>Team Admin</h1>
         <div class="api-section">
             <h2>Get All Teams</h2>
-            <button onclick="getAllTeams()">Get Teams</button>
+            <button id="getAllTeamsBtn">Get Teams</button>
             <pre id="teamsOutput"></pre>
         </div>
         <div class="api-section">
@@ -27,7 +27,7 @@
         <div class="api-section">
             <h2>Get Team Info by ID</h2>
             <input type="text" id="getTeamId" placeholder="Team ID" required>
-            <button onclick="getTeamInfoById()">Get Team Info</button>
+            <button id="getTeamInfoBtn">Get Team Info</button>
             <pre id="getTeamInfoOutput"></pre>
         </div>
         <div class="api-section">
@@ -42,7 +42,7 @@
         <div class="api-section">
             <h2>Delete Team by ID</h2>
             <input type="text" id="deleteTeamId" placeholder="Team ID" required>
-            <button onclick="deleteTeamById()">Delete Team</button>
+            <button id="deleteTeamBtn">Delete Team</button>
             <pre id="deleteTeamOutput"></pre>
         </div>
         <div class="api-section">
@@ -64,6 +64,6 @@
             <pre id="removeMemberFromTeamOutput"></pre>
         </div>
     </div>
-    <script src="teamscripts.js"></script>
+    <script type="module" src="teamscripts.js"></script>
 </body>
 </html>

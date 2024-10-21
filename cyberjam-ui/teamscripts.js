@@ -1,4 +1,5 @@
-const apiUrl = 'http://localhost:8080/team-admin';
+import config from './config.js';
+const apiUrl = `${config.apiUrl}/team-admin`;
 
 async function getAllTeams() {
     try {
@@ -105,3 +106,14 @@ document.getElementById('removeMemberFromTeamForm').addEventListener('submit', a
         document.getElementById('removeMemberFromTeamOutput').textContent = 'Error removing member from team';
     }
 });
+
+// Add this function at the end of the file
+function initializeEventListeners() {
+    document.getElementById('getAllTeamsBtn').addEventListener('click', getAllTeams);
+    document.getElementById('getTeamInfoBtn').addEventListener('click', getTeamInfoById);
+    document.getElementById('deleteTeamBtn').addEventListener('click', deleteTeamById);
+    // Add other event listeners here as needed
+}
+
+// Call the initialization function when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', initializeEventListeners);
