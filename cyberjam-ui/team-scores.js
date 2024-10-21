@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("error").textContent = 'Please enter a team name.';
             return;
         }
-        const url = `http://${apiUrl}/${teamName}/all-scores`;
+        const url = `${apiUrl}/${teamName}/all-scores`;
 
         fetch(url)
             .then(response => {

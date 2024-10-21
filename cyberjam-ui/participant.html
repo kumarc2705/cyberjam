@@ -11,7 +11,7 @@
         <h1>Participant Admin</h1>
         <div class="api-section">
             <h2>Get All Participants</h2>
-            <button onclick="getAllParticipants()">Get Participants</button>
+            <button id="getAllParticipantsBtn">Get Participants</button>
             <pre id="participantsOutput"></pre>
         </div>
         <div class="api-section">
@@ -29,7 +29,7 @@
         <div class="api-section">
             <h2>Remove Participant</h2>
             <input type="text" id="removeParticipantId" placeholder="Participant ID" required>
-            <button onclick="removeParticipant()">Remove Participant</button>
+            <button id="removeParticipantBtn">Remove Participant</button>
             <pre id="removeParticipantOutput"></pre>
         </div>
         <div class="api-section">
@@ -45,6 +45,6 @@
             <pre id="updateParticipantOutput"></pre>
         </div>
     </div>
-    <script src="pscripts.js"></script>
+    <script type="module" src="pscripts.js"></script>
 </body>
 </html>

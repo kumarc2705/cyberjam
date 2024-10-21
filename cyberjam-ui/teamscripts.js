@@ -1,4 +1,5 @@
 import config from './config.js';
+
 const apiUrl = `${config.apiUrl}/team-admin`;
 
 async function getAllTeams() {
@@ -11,7 +12,31 @@ async function getAllTeams() {
     }
 }
 
-document.getElementById('addTeamForm').addEventListener('submit', async (event) => {
+async function getTeamInfoById() {
+    const teamId = document.getElementById('getTeamId').value;
+    try {
+        const response = await fetch(`${apiUrl}/get-team-info-with-id?id=${teamId}`);
+        const data = await response.json();
+        document.getElementById('getTeamInfoOutput').textContent = JSON.stringify(data, null, 2);
+    } catch (error) {
+        document.getElementById('getTeamInfoOutput').textContent = 'Error fetching team info';
+    }
+}
+
+async function deleteTeamById() {
+    const teamId = document.getElementById('deleteTeamId').value;
+    try {
+        const response = await fetch(`${apiUrl}/delete-team-with-id?id=${teamId}`, {
+            method: 'DELETE'
+        });
+        const data = await response.text();
+        document.getElementById('deleteTeamOutput').textContent = data;
+    } catch (error) {
+        document.getElementById('deleteTeamOutput').textContent = 'Error deleting team';
+    }
+}
+
+async function addTeam(event) {
     event.preventDefault();
     const teamId = document.getElementById('teamId').value;
     const teamName = document.getElementById('teamName').value;
@@ -29,20 +54,9 @@ document.getElementById('addTeamForm').addEventListener('submit', async (event) 
     } catch (error) {
         document.getElementById('addTeamOutput').textContent = 'Error adding team';
     }
-});
-
-async function getTeamInfoById() {
-    const teamId = document.getElementById('getTeamId').value;
-    try {
-        const response = await fetch(`${apiUrl}/get-team-info-with-id?id=${teamId}`);
-        const data = await response.json();
-        document.getElementById('getTeamInfoOutput').textContent = JSON.stringify(data, null, 2);
-    } catch (error) {
-        document.getElementById('getTeamInfoOutput').textContent = 'Error fetching team info';
-    }
 }
 
-document.getElementById('updateTeamForm').addEventListener('submit', async (event) => {
+async function updateTeam(event) {
     event.preventDefault();
     const updatedTeam = {
         id: document.getElementById('updateTeamId').value,
@@ -62,22 +76,9 @@ document.getElementById('updateTeamForm').addEventListener('submit', async (even
     } catch (error) {
         document.getElementById('updateTeamOutput').textContent = 'Error updating team';
     }
-});
-
-async function deleteTeamById() {
-    const teamId = document.getElementById('deleteTeamId').value;
-    try {
-        const response = await fetch(`${apiUrl}/delete-team-with-id?id=${teamId}`, {
-            method: 'DELETE'
-        });
-        const data = await response.text();
-        document.getElementById('deleteTeamOutput').textContent = data;
-    } catch (error) {
-        document.getElementById('deleteTeamOutput').textContent = 'Error deleting team';
-    }
 }
 
-document.getElementById('addMemberToTeamForm').addEventListener('submit', async (event) => {
+async function addMemberToTeam(event) {
     event.preventDefault();
     const teamId = document.getElementById('addMemberTeamId').value;
     const participantId = document.getElementById('addMemberParticipantId').value;
@@ -90,9 +91,9 @@ document.getElementById('addMemberToTeamForm').addEventListener('submit', async 
     } catch (error) {
         document.getElementById('addMemberToTeamOutput').textContent = 'Error adding member to team';
     }
-});
+}
 
-document.getElementById('removeMemberFromTeamForm').addEventListener('submit', async (event) => {
+async function removeMemberFromTeam(event) {
     event.preventDefault();
     const teamId = document.getElementById('removeMemberTeamId').value;
     const participantId = document.getElementById('removeMemberParticipantId').value;
@@ -105,14 +106,16 @@ document.getElementById('removeMemberFromTeamForm').addEventListener('submit', a
     } catch (error) {
         document.getElementById('removeMemberFromTeamOutput').textContent = 'Error removing member from team';
     }
-});
+}
 
-// Add this function at the end of the file
 function initializeEventListeners() {
     document.getElementById('getAllTeamsBtn').addEventListener('click', getAllTeams);
     document.getElementById('getTeamInfoBtn').addEventListener('click', getTeamInfoById);
     document.getElementById('deleteTeamBtn').addEventListener('click', deleteTeamById);
-    // Add other event listeners here as needed
+    document.getElementById('addTeamForm').addEventListener('submit', addTeam);
+    document.getElementById('updateTeamForm').addEventListener('submit', updateTeam);
+    document.getElementById('addMemberToTeamForm').addEventListener('submit', addMemberToTeam);
+    document.getElementById('removeMemberFromTeamForm').addEventListener('submit', removeMemberFromTeam);
 }
 
 // Call the initialization function when the DOM is fully loaded

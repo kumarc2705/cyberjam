@@ -37,7 +37,7 @@ public class ScoringAlgorithmService {
             totalWeight += weight;
         }
 
-        return totalWeight == 0 ? 0 : totalScore / totalWeight;
+        return totalWeight == 0 ? 0 : totalScore;
     }
 
     public double calculateThemeScore(TeamScoreView teamScoreView, String theme) {
@@ -57,7 +57,7 @@ public class ScoringAlgorithmService {
             totalWeight += weight;
         }
 
-        return totalWeight == 0 ? 0 : totalScore / totalWeight;
+        return totalWeight == 0 ? 0 : totalScore;
     }
 
     public double calculateFinalScore(TeamScoreView teamScoreView) {

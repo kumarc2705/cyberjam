@@ -95,7 +95,6 @@ public class JudgeAdminController {
             // Read the existing data from the constants file
             File file = new File(CONSTANTS_FILE_PATH);
             Map<String, Object> constants = objectMapper.readValue(file, Map.class);
-    
             // Deserialize the list of judges
             List<Judge> judges = objectMapper.convertValue(constants.get("judges"), new TypeReference<List<Judge>>() {});
     
@@ -110,7 +109,7 @@ public class JudgeAdminController {
                     break;
                 }
             }
-    
+            System.out.println(updatedJudge.toString());
             if (!updated) {
                 return new ResponseEntity<>("Judge not found", HttpStatus.NOT_FOUND);
             }
