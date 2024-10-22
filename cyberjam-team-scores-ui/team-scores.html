@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Scores</title>
+    <link rel="stylesheet" href="team-scores.css">
+</head>
+<body>
+    <div class="container">
+        <div class="input-group">
+            <input type="text" id="teamNameInput" placeholder="Enter team name">
+            <button id="fetchScores">Fetch Scores</button>
+        </div>
+        <h1>Scores for Team: <span id="teamName"></span></h1>
+        <h2>Total Score: <span id="totalScore"></span></h2>
+
+        <h3>Role Scores</h3>
+        <ul id="roleScores"></ul>
+
+        <h3>Theme Scores</h3>
+        <ul id="themeScores"></ul>
+
+        <p id="error" class="error"></p>
+    </div>
+    <script type="module" src="team-scores.js"></script>
+</body>
+</html>
