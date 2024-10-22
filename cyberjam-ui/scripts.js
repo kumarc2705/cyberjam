@@ -25,18 +25,18 @@ document.addEventListener('DOMContentLoaded', () => {
             role: document.getElementById('role').value,
             description: document.getElementById('description').value,
             roleWeightage: {
-                software: document.getElementById('weightSoftware').value,
-                hardware: document.getElementById('weightHardware').value,
-                visualArt: document.getElementById('weightVisualArt').value,
-                music: document.getElementById('weightMusic').value,
-                wildCard: document.getElementById('weightWildCard').value
+                software: parseFloat(document.getElementById('weightSoftware').value),
+                hardware: parseFloat(document.getElementById('weightHardware').value),
+                visualArt: parseFloat(document.getElementById('weightVisualArt').value),
+                music: parseFloat(document.getElementById('weightMusic').value),
+                wildCard: parseFloat(document.getElementById('weightWildCard').value)
             },
             themeWeightage: {
-                ai: document.getElementById('weightAi').value,
-                fashion: document.getElementById('weightFashion').value,
-                governance: document.getElementById('weightGovernance').value,
-                sportsGaming: document.getElementById('weightSportsGaming').value,
-                securityPrivacy: document.getElementById('weightSecurityPrivacy').value
+                ai: parseFloat(document.getElementById('weightAi').value),
+                fashion: parseFloat(document.getElementById('weightFashion').value),
+                governance: parseFloat(document.getElementById('weightGovernance').value),
+                sportsGaming: parseFloat(document.getElementById('weightSportsGaming').value),
+                securityPrivacy: parseFloat(document.getElementById('weightSecurityPrivacy').value)
             }
         };
         try {
@@ -84,18 +84,18 @@ document.addEventListener('DOMContentLoaded', () => {
             role: document.getElementById('updateRole').value,
             description: document.getElementById('updateDescription').value,
             roleWeightage: {
-                software: document.getElementById('updateWeightSoftware').value,
-                hardware: document.getElementById('updateWeightHardware').value,
-                visualArt: document.getElementById('updateWeightVisualArt').value,
-                music: document.getElementById('updateWeightMusic').value,
-                wildCard: document.getElementById('updateWeightWildCard').value
+                softwareWeight: parseFloat(document.getElementById('updateWeightSoftware').value),
+                hardwareWeight: parseFloat(document.getElementById('updateWeightHardware').value),
+                visualArtWeight: parseFloat(document.getElementById('updateWeightVisualArt').value),
+                musicWeight: parseFloat(document.getElementById('updateWeightMusic').value),
+                wildCardWeight: parseFloat(document.getElementById('updateWeightWildCard').value)
             },
             themeWeightage: {
-                ai: document.getElementById('updateWeightAi').value,
-                fashion: document.getElementById('updateWeightFashion').value,
-                governance: document.getElementById('updateWeightGovernance').value,
-                sportsGaming: document.getElementById('updateWeightSportsGaming').value,
-                securityPrivacy: document.getElementById('updateWeightSecurityPrivacy').value
+                aiWeight: parseFloat(document.getElementById('updateWeightAi').value),
+                fashionWeight: parseFloat(document.getElementById('updateWeightFashion').value),
+                governanceWeight: parseFloat(document.getElementById('updateWeightGovernance').value),
+                sportsGamingWeight: parseFloat(document.getElementById('updateWeightSportsGaming').value),
+                securityPrivacyWeight: parseFloat(document.getElementById('updateWeightSecurityPrivacy').value)
             }
         };
         try {

@@ -109,7 +109,6 @@ public class JudgeAdminController {
                     break;
                 }
             }
-            System.out.println(updatedJudge.toString());
             if (!updated) {
                 return new ResponseEntity<>("Judge not found", HttpStatus.NOT_FOUND);
             }
