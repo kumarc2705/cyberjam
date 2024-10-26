@@ -1,6 +1,7 @@
 import config from './config.js';
 
 const apiUrl = `${config.apiUrl}/judge-admin`;
+
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('getAllJudgesBtn').addEventListener('click', async () => {
         try {
@@ -25,20 +26,21 @@ document.addEventListener('DOMContentLoaded', () => {
             role: document.getElementById('role').value,
             description: document.getElementById('description').value,
             roleWeightage: {
-                software: parseFloat(document.getElementById('weightSoftware').value),
-                hardware: parseFloat(document.getElementById('weightHardware').value),
-                visualArt: parseFloat(document.getElementById('weightVisualArt').value),
-                music: parseFloat(document.getElementById('weightMusic').value),
-                wildCard: parseFloat(document.getElementById('weightWildCard').value)
+                softwareWeight: parseFloat(document.getElementById('softwareWeight').value),
+                hardwareWeight: parseFloat(document.getElementById('hardwareWeight').value),
+                visualArtWeight: parseFloat(document.getElementById('visualArtWeight').value),
+                musicWeight: parseFloat(document.getElementById('musicWeight').value),
+                wildCardWeight: parseFloat(document.getElementById('wildCardWeight').value)
             },
             themeWeightage: {
-                ai: parseFloat(document.getElementById('weightAi').value),
-                fashion: parseFloat(document.getElementById('weightFashion').value),
-                governance: parseFloat(document.getElementById('weightGovernance').value),
-                sportsGaming: parseFloat(document.getElementById('weightSportsGaming').value),
-                securityPrivacy: parseFloat(document.getElementById('weightSecurityPrivacy').value)
+                aiWeight: parseFloat(document.getElementById('aiWeight').value),
+                fashionWeight: parseFloat(document.getElementById('fashionWeight').value),
+                governanceWeight: parseFloat(document.getElementById('governanceWeight').value),
+                sportsGamingWeight: parseFloat(document.getElementById('sportsGamingWeight').value),
+                securityPrivacyWeight: parseFloat(document.getElementById('securityPrivacyWeight').value)
             }
         };
+
         try {
             const response = await fetch(`${apiUrl}/add-judge`, {
                 method: 'POST',
@@ -48,9 +50,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 body: JSON.stringify(judge)
             });
             if (!response.ok) {
-                throw new Error('Network response was not ok');
+                throw new Error('Network response was not ok ' + response.statusText);
             }
-            const data = await response.text(); // Handle response as text
+            const data = await response.text();
             document.getElementById('addJudgeOutput').textContent = data;
         } catch (error) {
             console.error('Error adding judge:', error);
@@ -84,18 +86,18 @@ document.addEventListener('DOMContentLoaded', () => {
             role: document.getElementById('updateRole').value,
             description: document.getElementById('updateDescription').value,
             roleWeightage: {
-                softwareWeight: parseFloat(document.getElementById('updateWeightSoftware').value),
-                hardwareWeight: parseFloat(document.getElementById('updateWeightHardware').value),
-                visualArtWeight: parseFloat(document.getElementById('updateWeightVisualArt').value),
-                musicWeight: parseFloat(document.getElementById('updateWeightMusic').value),
-                wildCardWeight: parseFloat(document.getElementById('updateWeightWildCard').value)
+                softwareWeight: parseFloat(document.getElementById('updateSoftwareWeight').value),
+                hardwareWeight: parseFloat(document.getElementById('updateHardwareWeight').value),
+                visualArtWeight: parseFloat(document.getElementById('updateVisualArtWeight').value),
+                musicWeight: parseFloat(document.getElementById('updateMusicWeight').value),
+                wildCardWeight: parseFloat(document.getElementById('updateWildCardWeight').value)
             },
             themeWeightage: {
-                aiWeight: parseFloat(document.getElementById('updateWeightAi').value),
-                fashionWeight: parseFloat(document.getElementById('updateWeightFashion').value),
-                governanceWeight: parseFloat(document.getElementById('updateWeightGovernance').value),
-                sportsGamingWeight: parseFloat(document.getElementById('updateWeightSportsGaming').value),
-                securityPrivacyWeight: parseFloat(document.getElementById('updateWeightSecurityPrivacy').value)
+                aiWeight: parseFloat(document.getElementById('updateAiWeight').value),
+                fashionWeight: parseFloat(document.getElementById('updateFashionWeight').value),
+                governanceWeight: parseFloat(document.getElementById('updateGovernanceWeight').value),
+                sportsGamingWeight: parseFloat(document.getElementById('updateSportsGamingWeight').value),
+                securityPrivacyWeight: parseFloat(document.getElementById('updateSecurityPrivacyWeight').value)
             }
         };
         try {
