@@ -71,11 +71,11 @@ public class ScoringAlgorithmService {
         finalScore += calculateRoleScore(teamScoreView, "wildCard");
 
         // Calculate theme scores
-        finalScore += calculateThemeScore(teamScoreView, "ai");
-        finalScore += calculateThemeScore(teamScoreView, "fashion");
-        finalScore += calculateThemeScore(teamScoreView, "governance");
-        finalScore += calculateThemeScore(teamScoreView, "sportsGaming");
-        finalScore += calculateThemeScore(teamScoreView, "securityPrivacy");
+        // finalScore += calculateThemeScore(teamScoreView, "ai");
+        // finalScore += calculateThemeScore(teamScoreView, "fashion");
+        // finalScore += calculateThemeScore(teamScoreView, "governance");
+        // finalScore += calculateThemeScore(teamScoreView, "sportsGaming");
+        // finalScore += calculateThemeScore(teamScoreView, "securityPrivacy");
 
         return finalScore;
     }
