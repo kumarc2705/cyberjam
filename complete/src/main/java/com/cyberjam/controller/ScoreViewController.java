@@ -76,6 +76,7 @@ public class ScoreViewController {
                         judgeScore = new JudgeScoreView();
                         judgeScores.put(judgeId, judgeScore);
                     }
+                    judgeScore.setJudgeId(judgeId);
                     judgeScore.setRoleScore(roleScores);
                     judgeScore.setThemeScore(themeScores);
                     scoreUpdated = true;
