@@ -1,1 +1,1356 @@
-{"judges":[{"name":"sad;","experience":"dsfl","role":"dslnfk","description":"dslnf","judgeId":"judge1","roleWeightage":{"softwareWeight":0.1,"hardwareWeight":0.0,"visualArtWeight":0.0,"musicWeight":0.0,"wildCardWeight":0.0},"themeWeightage":{"aiWeight":0.0,"fashionWeight":0.0,"governanceWeight":0.0,"sportsGamingWeight":0.0,"securityPrivacyWeight":0.0}},{"name":"Jane Smith","experience":"10 years","role":"JUDGE","description":null,"judgeId":"judge2","roleWeightage":{"softwareWeight":0.25,"hardwareWeight":0.2,"visualArtWeight":0.15,"musicWeight":0.2,"wildCardWeight":0.2},"themeWeightage":{"aiWeight":0.25,"fashionWeight":0.2,"governanceWeight":0.15,"sportsGamingWeight":0.2,"securityPrivacyWeight":0.2}},{"name":"Alice Johnson","experience":"8 years","role":"JUDGE","description":null,"judgeId":"judge3","roleWeightage":{"softwareWeight":0.3,"hardwareWeight":0.25,"visualArtWeight":0.2,"musicWeight":0.15,"wildCardWeight":0.1},"themeWeightage":{"aiWeight":0.3,"fashionWeight":0.25,"governanceWeight":0.2,"sportsGamingWeight":0.15,"securityPrivacyWeight":0.1}},{"name":"Bob Brown","experience":"12 years","role":"JUDGE","description":null,"judgeId":"judge4","roleWeightage":{"softwareWeight":0.15,"hardwareWeight":0.3,"visualArtWeight":0.25,"musicWeight":0.2,"wildCardWeight":0.1},"themeWeightage":{"aiWeight":0.15,"fashionWeight":0.3,"governanceWeight":0.25,"sportsGamingWeight":0.2,"securityPrivacyWeight":0.1}},{"name":"asdasf","experience":"weaqeq","role":"wqeqwer","description":"qweqwe","judgeId":"rsgsdgf","roleWeightage":null,"themeWeightage":null},{"name":"b","experience":"b","role":"b","description":"b","judgeId":"a","roleWeightage":{"softwareWeight":2.0,"hardwareWeight":2.0,"visualArtWeight":2.0,"musicWeight":2.0,"wildCardWeight":2.0},"themeWeightage":{"aiWeight":2.0,"fashionWeight":2.0,"governanceWeight":2.0,"sportsGamingWeight":2.0,"securityPrivacyWeight":2.0}},{"name":"a","experience":"a","role":"a","description":"a","judgeId":"b","roleWeightage":null,"themeWeightage":null},{"name":"q","experience":"q","role":"q","description":"q","judgeId":"q","roleWeightage":{"softwareWeight":0.0,"hardwareWeight":0.0,"visualArtWeight":0.0,"musicWeight":0.0,"wildCardWeight":0.0},"themeWeightage":{"aiWeight":0.0,"fashionWeight":0.0,"governanceWeight":0.0,"sportsGamingWeight":0.0,"securityPrivacyWeight":0.0}},{"name":"1","experience":"1","role":"1","description":"1","judgeId":"11","roleWeightage":{"softwareWeight":0.0,"hardwareWeight":0.0,"visualArtWeight":0.0,"musicWeight":0.0,"wildCardWeight":0.0},"themeWeightage":{"aiWeight":0.0,"fashionWeight":0.0,"governanceWeight":0.0,"sportsGamingWeight":0.0,"securityPrivacyWeight":0.0}},{"name":"22","experience":"22","role":"22","description":"22","judgeId":"1","roleWeightage":{"softwareWeight":0.1,"hardwareWeight":0.1,"visualArtWeight":0.1,"musicWeight":0.2,"wildCardWeight":0.0},"themeWeightage":{"aiWeight":0.0,"fashionWeight":0.0,"governanceWeight":0.0,"sportsGamingWeight":0.0,"securityPrivacyWeight":0.0}}],"participants":[{"name":"Jane Smith","experience":"3 years","role":"Designer","description":"Creative UI/UX Designer","participantId":"p124"},{"name":"Bob","experience":"3 years","role":"PARTICIPANT","description":null,"participantId":"p2"},{"name":"Charlie","experience":"4 years","role":"PARTICIPANT","description":null,"participantId":"p3"},{"name":"David","experience":"2 years","role":"PARTICIPANT","description":null,"participantId":"p4"},{"name":"Eve","experience":"6 years","role":"PARTICIPANT","description":null,"participantId":"p5"},{"name":"Frank","experience":"1 year","role":"PARTICIPANT","description":null,"participantId":"p6"},{"name":"Grace","experience":"7 years","role":"PARTICIPANT","description":null,"participantId":"p7"},{"name":"Hank","experience":"3 years","role":"PARTICIPANT","description":null,"participantId":"p8"},{"name":"Ivy","experience":"2 years","role":"PARTICIPANT","description":null,"participantId":"p9"},{"name":"Jack","experience":"4 years","role":"PARTICIPANT","description":null,"participantId":"p10"},{"name":"123","experience":"12","role":"12","description":"12","participantId":"12"}],"teams":[{"id":"team3","name":"Team Gamma","members":[{"name":"Eve","experience":"6 years","role":"PARTICIPANT","description":null,"participantId":"p5"},{"name":"Frank","experience":"1 year","role":"PARTICIPANT","description":null,"participantId":"p6"}]},{"id":"team4","name":"Team Delta","members":[{"name":"Grace","experience":"7 years","role":"PARTICIPANT","description":null,"participantId":"p7"},{"name":"Hank","experience":"3 years","role":"PARTICIPANT","description":null,"participantId":"p8"}]},{"id":"team1","name":"Team Alpha","members":[{"name":"Bob","experience":"3 years","role":"PARTICIPANT","description":null,"participantId":"p2"},{"name":"Jane Smith","experience":"3 years","role":"Designer","description":"Creative UI/UX Designer","participantId":"p124"}]},{"id":"team2","name":"Team Beta","members":[{"name":"Charlie","experience":"4 years","role":"PARTICIPANT","description":null,"participantId":"p3"},{"name":"David","experience":"2 years","role":"PARTICIPANT","description":null,"participantId":"p4"},{"name":"Bob","experience":"3 years","role":"PARTICIPANT","description":null,"participantId":"p2"}]},{"id":"team5","name":"Team Epsilon","members":[{"name":"Ivy","experience":"2 years","role":"PARTICIPANT","description":null,"participantId":"p9"},{"name":"Jack","experience":"4 years","role":"PARTICIPANT","description":null,"participantId":"p10"}]},{"id":"team23","name":"Alphae","members":[{"name":"Bob","experience":"3 years","role":"PARTICIPANT","description":null,"participantId":"p2"},{"name":"Charlie","experience":"4 years","role":"PARTICIPANT","description":null,"participantId":"p3"}]},{"id":"new-team","name":"New Team","members":[{"name":"David","experience":"2 years","role":"PARTICIPANT","description":null,"participantId":"p4"}]},{"id":"22","name":"2","members":[{"name":"David","experience":"2 years","role":"PARTICIPANT","description":null,"participantId":"p4"}]}],"teamScores":[{"teamId":"team1","judgeScores":{"judge1":{"judgeId":"judge1","roleScore":{"softwareScore":0.0,"hardwareScore":0.0,"visualArtScore":0.0,"musicScore":0.0,"wildCardScore":0.0},"themeScore":{"aiScore":9.0,"fashionScore":8.0,"governanceScore":7.5,"sportsGamingScore":8.5,"securityPrivacyScore":9.0}},"judge2":{"judgeId":"judge2","roleScore":{"softwareScore":8.0,"hardwareScore":7.5,"visualArtScore":8.5,"musicScore":7.5,"wildCardScore":8.0},"themeScore":{"aiScore":8.5,"fashionScore":7.5,"governanceScore":8.0,"sportsGamingScore":8.0,"securityPrivacyScore":8.5}},"judge3":{"judgeId":"judge3","roleScore":{"softwareScore":9.0,"hardwareScore":8.0,"visualArtScore":8.0,"musicScore":8.5,"wildCardScore":7.0},"themeScore":{"aiScore":8.0,"fashionScore":8.5,"governanceScore":8.5,"sportsGamingScore":8.0,"securityPrivacyScore":8.0}},"judge4":{"judgeId":"judge4","roleScore":{"softwareScore":8.5,"hardwareScore":7.5,"visualArtScore":9.0,"musicScore":8.0,"wildCardScore":7.5},"themeScore":{"aiScore":9.0,"fashionScore":8.0,"governanceScore":7.5,"sportsGamingScore":8.5,"securityPrivacyScore":9.0}},"a":{"judgeId":"a","roleScore":{"softwareScore":1.0,"hardwareScore":7.0,"visualArtScore":9.0,"musicScore":8.0,"wildCardScore":7.5},"themeScore":{"aiScore":9.0,"fashionScore":8.0,"governanceScore":7.5,"sportsGamingScore":8.5,"securityPrivacyScore":9.0}}}},{"teamId":"team2","judgeScores":{"judge1":{"judgeId":"judge1","roleScore":{"softwareScore":8.5,"hardwareScore":7.0,"visualArtScore":9.0,"musicScore":8.0,"wildCardScore":7.5},"themeScore":{"aiScore":9.0,"fashionScore":8.0,"governanceScore":7.5,"sportsGamingScore":8.5,"securityPrivacyScore":9.0}},"judge2":{"judgeId":"judge2","roleScore":{"softwareScore":8.0,"hardwareScore":7.5,"visualArtScore":8.5,"musicScore":7.5,"wildCardScore":8.0},"themeScore":{"aiScore":8.5,"fashionScore":7.5,"governanceScore":8.0,"sportsGamingScore":8.0,"securityPrivacyScore":8.5}},"judge3":{"judgeId":"judge3","roleScore":{"softwareScore":9.0,"hardwareScore":8.0,"visualArtScore":8.0,"musicScore":8.5,"wildCardScore":7.0},"themeScore":{"aiScore":8.0,"fashionScore":8.5,"governanceScore":8.5,"sportsGamingScore":8.0,"securityPrivacyScore":8.0}},"judge4":{"judgeId":"judge4","roleScore":{"softwareScore":8.5,"hardwareScore":7.5,"visualArtScore":9.0,"musicScore":8.0,"wildCardScore":7.5},"themeScore":{"aiScore":9.0,"fashionScore":8.0,"governanceScore":7.5,"sportsGamingScore":8.5,"securityPrivacyScore":9.0}},"a":{"judgeId":"a","roleScore":{"softwareScore":0.0,"hardwareScore":0.0,"visualArtScore":0.0,"musicScore":0.0,"wildCardScore":0.0},"themeScore":{"aiScore":0.0,"fashionScore":0.0,"governanceScore":0.0,"sportsGamingScore":0.0,"securityPrivacyScore":0.0}}}},{"teamId":"team23","judgeScores":{"judge1":{"judgeId":"judge1","roleScore":{"softwareScore":1.0,"hardwareScore":0.0,"visualArtScore":0.0,"musicScore":0.0,"wildCardScore":0.0},"themeScore":{"aiScore":0.0,"fashionScore":0.0,"governanceScore":0.0,"sportsGamingScore":0.0,"securityPrivacyScore":0.0}}}},{"teamId":"22","judgeScores":{"judge1":{"judgeId":"judge1","roleScore":{"softwareScore":11.0,"hardwareScore":1.0,"visualArtScore":11.0,"musicScore":111.0,"wildCardScore":11.0},"themeScore":{"aiScore":11.0,"fashionScore":1.0,"governanceScore":1.0,"sportsGamingScore":1.0,"securityPrivacyScore":1.0}}}}]}
+{
+    "judges": [
+        {
+            "name": "Kumar Chandrasekhar",
+            "experience": "6 yearss",
+            "role": "JUDGE",
+            "description": "Software Developer",
+            "judgeId": "cbjd1",
+            "roleWeightage": {
+                "softwareWeight": 0.1,
+                "hardwareWeight": 0.17,
+                "visualArtWeight": 0.0,
+                "musicWeight": 0.0,
+                "wildCardWeight": 0.0
+            },
+            "themeWeightage": {
+                "aiWeight": 0.25,
+                "fashionWeight": 0.0,
+                "governanceWeight": 0.25,
+                "sportsGamingWeight": 0.0,
+                "securityPrivacyWeight": 0.28
+            }
+        },
+        {
+            "name": "Cordell",
+            "experience": "6 yearss",
+            "role": "JUDGE",
+            "description": "Software Developer",
+            "judgeId": "cbjd100",
+            "roleWeightage": {
+                "softwareWeight": 0.06,
+                "hardwareWeight": 0.0,
+                "visualArtWeight": 0.0,
+                "musicWeight": 0.0,
+                "wildCardWeight": 0.0
+            },
+            "themeWeightage": {
+                "aiWeight": 0.25,
+                "fashionWeight": 0.0,
+                "governanceWeight": 0.0,
+                "sportsGamingWeight": 0.0,
+                "securityPrivacyWeight": 0.0
+            }
+        },
+        {
+            "name": "Tiara Nicole",
+            "experience": "NA",
+            "role": "JUDGE",
+            "description": "NA",
+            "judgeId": "cbjd2",
+            "roleWeightage": {
+                "softwareWeight": 0.0,
+                "hardwareWeight": 0.0,
+                "visualArtWeight": 0.2,
+                "musicWeight": 0.1,
+                "wildCardWeight": 0.15
+            },
+            "themeWeightage": {
+                "aiWeight": 0.2,
+                "fashionWeight": 0.2,
+                "governanceWeight": 0.0,
+                "sportsGamingWeight": 0.0,
+                "securityPrivacyWeight": 0.16
+            }
+        },
+        {
+            "name": "Mabel Oza",
+            "experience": "NA",
+            "role": "JUDGE",
+            "description": "NA",
+            "judgeId": "cbjd3",
+            "roleWeightage": {
+                "softwareWeight": 0.16,
+                "hardwareWeight": 0.17,
+                "visualArtWeight": 0.06,
+                "musicWeight": 0.0,
+                "wildCardWeight": 0.0
+            },
+            "themeWeightage": {
+                "aiWeight": 0.0,
+                "fashionWeight": 0.0,
+                "governanceWeight": 0.25,
+                "sportsGamingWeight": 0.0,
+                "securityPrivacyWeight": 0.28
+            }
+        },
+        {
+            "name": "Jaison Jayaraj ",
+            "experience": "NA",
+            "role": "JUDGE",
+            "description": "NA",
+            "judgeId": "cbjd4",
+            "roleWeightage": {
+                "softwareWeight": 0.2,
+                "hardwareWeight": 0.06,
+                "visualArtWeight": 0.06,
+                "musicWeight": 0.0,
+                "wildCardWeight": 0.0
+            },
+            "themeWeightage": {
+                "aiWeight": 0.0,
+                "fashionWeight": 0.0,
+                "governanceWeight": 0.0,
+                "sportsGamingWeight": 0.0,
+                "securityPrivacyWeight": 0.0
+            }
+        },
+        {
+            "name": "Emily Landon",
+            "experience": "NA",
+            "role": "JUDGE",
+            "description": "NA",
+            "judgeId": "cbjd5",
+            "roleWeightage": {
+                "softwareWeight": 0.0,
+                "hardwareWeight": 0.1,
+                "visualArtWeight": 0.0,
+                "musicWeight": 0.0,
+                "wildCardWeight": 0.11
+            },
+            "themeWeightage": {
+                "aiWeight": 0.0,
+                "fashionWeight": 0.1,
+                "governanceWeight": 0.0,
+                "sportsGamingWeight": 0.0,
+                "securityPrivacyWeight": 0.0
+            }
+        },
+        {
+            "name": "Carl Lewis",
+            "experience": "NA",
+            "role": "JUDGE",
+            "description": "NA",
+            "judgeId": "cbjd6",
+            "roleWeightage": {
+                "softwareWeight": 0.06,
+                "hardwareWeight": 0.1,
+                "visualArtWeight": 0.06,
+                "musicWeight": 0.1,
+                "wildCardWeight": 0.15
+            },
+            "themeWeightage": {
+                "aiWeight": 0.1,
+                "fashionWeight": 0.0,
+                "governanceWeight": 0.0,
+                "sportsGamingWeight": 0.0,
+                "securityPrivacyWeight": 0.0
+            }
+        },
+        {
+            "name": "Marshall Wilkos ",
+            "experience": "NA",
+            "role": "JUDGE",
+            "description": "NA",
+            "judgeId": "cbjd7",
+            "roleWeightage": {
+                "softwareWeight": 0.0,
+                "hardwareWeight": 0.0,
+                "visualArtWeight": 0.0,
+                "musicWeight": 0.09,
+                "wildCardWeight": 0.11
+            },
+            "themeWeightage": {
+                "aiWeight": 0.0,
+                "fashionWeight": 0.0,
+                "governanceWeight": 0.1,
+                "sportsGamingWeight": 0.2,
+                "securityPrivacyWeight": 0.0
+            }
+        },
+        {
+            "name": "Vlad Avesalon",
+            "experience": "NA",
+            "role": "JUDGE",
+            "description": "NA",
+            "judgeId": "cbjd8",
+            "roleWeightage": {
+                "softwareWeight": 0.1,
+                "hardwareWeight": 0.06,
+                "visualArtWeight": 0.06,
+                "musicWeight": 0.12,
+                "wildCardWeight": 0.06
+            },
+            "themeWeightage": {
+                "aiWeight": 0.1,
+                "fashionWeight": 0.0,
+                "governanceWeight": 0.0,
+                "sportsGamingWeight": 0.2,
+                "securityPrivacyWeight": 0.0
+            }
+        },
+        {
+            "name": "Drew Mailen",
+            "experience": "NA",
+            "role": "JUDGE",
+            "description": "NA",
+            "judgeId": "cbjd9",
+            "roleWeightage": {
+                "softwareWeight": 0.06,
+                "hardwareWeight": 0.06,
+                "visualArtWeight": 0.15,
+                "musicWeight": 0.12,
+                "wildCardWeight": 0.15
+            },
+            "themeWeightage": {
+                "aiWeight": 0.0,
+                "fashionWeight": 0.2,
+                "governanceWeight": 0.15,
+                "sportsGamingWeight": 0.2,
+                "securityPrivacyWeight": 0.0
+            }
+        },
+        {
+            "name": "Jason Lee",
+            "experience": "NA",
+            "role": "JUDGE",
+            "description": "NA",
+            "judgeId": "cbjd10",
+            "roleWeightage": {
+                "softwareWeight": 0.06,
+                "hardwareWeight": 0.06,
+                "visualArtWeight": 0.06,
+                "musicWeight": 0.12,
+                "wildCardWeight": 0.15
+            },
+            "themeWeightage": {
+                "aiWeight": 0.0,
+                "fashionWeight": 0.1,
+                "governanceWeight": 0.1,
+                "sportsGamingWeight": 0.0,
+                "securityPrivacyWeight": 0.0
+            }
+        },
+        {
+            "name": "Christopher Demma",
+            "experience": "NA",
+            "role": "JUDGE",
+            "description": "NA",
+            "judgeId": "cbjd11",
+            "roleWeightage": {
+                "softwareWeight": 0.0,
+                "hardwareWeight": 0.06,
+                "visualArtWeight": 0.25,
+                "musicWeight": 0.14,
+                "wildCardWeight": 0.06
+            },
+            "themeWeightage": {
+                "aiWeight": 0.1,
+                "fashionWeight": 0.3,
+                "governanceWeight": 0.0,
+                "sportsGamingWeight": 0.2,
+                "securityPrivacyWeight": 0.0
+            }
+        },
+        {
+            "name": "Ann marie",
+            "experience": "NA",
+            "role": "JUDGE",
+            "description": "NA",
+            "judgeId": "cbjd20",
+            "roleWeightage": {
+                "softwareWeight": 0.0,
+                "hardwareWeight": 0.0,
+                "visualArtWeight": 0.15,
+                "musicWeight": 0.12,
+                "wildCardWeight": 0.0
+            },
+            "themeWeightage": {
+                "aiWeight": 0.0,
+                "fashionWeight": 0.1,
+                "governanceWeight": 0.0,
+                "sportsGamingWeight": 0.0,
+                "securityPrivacyWeight": 0.0
+            }
+        },
+        {
+            "name": "Jason Ayala",
+            "experience": "NA",
+            "role": "JUDGE",
+            "description": "NA",
+            "judgeId": "cbjd14",
+            "roleWeightage": {
+                "softwareWeight": 0.2,
+                "hardwareWeight": 0.16,
+                "visualArtWeight": 0.0,
+                "musicWeight": 0.12,
+                "wildCardWeight": 0.06
+            },
+            "themeWeightage": {
+                "aiWeight": 0.25,
+                "fashionWeight": 0.0,
+                "governanceWeight": 0.15,
+                "sportsGamingWeight": 0.2,
+                "securityPrivacyWeight": 0.28
+            }
+        },
+        {
+            "name": "Alex",
+            "experience": "4",
+            "role": "4",
+            "description": "4",
+            "judgeId": "cbjd23",
+            "roleWeightage": {
+                "softwareWeight": 0.0,
+                "hardwareWeight": 0.0,
+                "visualArtWeight": 0.0,
+                "musicWeight": 0.0,
+                "wildCardWeight": 0.0
+            },
+            "themeWeightage": {
+                "aiWeight": 0.0,
+                "fashionWeight": 0.0,
+                "governanceWeight": 0.0,
+                "sportsGamingWeight": 0.0,
+                "securityPrivacyWeight": 0.0
+            }
+        }
+    ],
+    "participants": [
+        {
+            "name": "kc",
+            "experience": "1",
+            "role": "1",
+            "description": "1",
+            "participantId": "p1"
+        }
+    ],
+    "teams": [
+        {
+            "id": "team1",
+            "name": "team1",
+            "members": [
+                {
+                    "name": "kc",
+                    "experience": "1",
+                    "role": "1",
+                    "description": "1",
+                    "participantId": "p1"
+                }
+            ]
+        },
+        {
+            "id": "team2",
+            "name": "team2",
+            "members": [
+                {
+                    "name": "kc",
+                    "experience": "1",
+                    "role": "1",
+                    "description": "1",
+                    "participantId": "p1"
+                }
+            ]
+        },
+        {
+            "id": "team3",
+            "name": "team3",
+            "members": [
+                {
+                    "name": "kc",
+                    "experience": "1",
+                    "role": "1",
+                    "description": "1",
+                    "participantId": "p1"
+                }
+            ]
+        },
+        {
+            "id": "team4",
+            "name": "team4",
+            "members": [
+                {
+                    "name": "kc",
+                    "experience": "1",
+                    "role": "1",
+                    "description": "1",
+                    "participantId": "p1"
+                }
+            ]
+        }
+    ],
+    "teamScores": [
+        {
+            "teamId": "team1",
+            "judgeScores": {
+                "cbjd1": {
+                    "judgeId": "cbjd1",
+                    "roleScore": {
+                        "softwareScore": 80.0,
+                        "hardwareScore": 80.0,
+                        "visualArtScore": 0.0,
+                        "musicScore": 0.0,
+                        "wildCardScore": 0.0
+                    },
+                    "themeScore": {
+                        "aiScore": 0.0,
+                        "fashionScore": 0.0,
+                        "governanceScore": 0.0,
+                        "sportsGamingScore": 0.0,
+                        "securityPrivacyScore": 0.0
+                    }
+                },
+                "cbjd3": {
+                    "judgeId": "cbjd3",
+                    "roleScore": {
+                        "softwareScore": 85.0,
+                        "hardwareScore": 80.0,
+                        "visualArtScore": 100.0,
+                        "musicScore": 98.0,
+                        "wildCardScore": 57.0
+                    },
+                    "themeScore": {
+                        "aiScore": 100.0,
+                        "fashionScore": 0.0,
+                        "governanceScore": 0.0,
+                        "sportsGamingScore": 0.0,
+                        "securityPrivacyScore": 0.0
+                    }
+                },
+                "cbjd23": {
+                    "judgeId": "cbjd23",
+                    "roleScore": {
+                        "softwareScore": 60.0,
+                        "hardwareScore": 100.0,
+                        "visualArtScore": 80.0,
+                        "musicScore": 40.0,
+                        "wildCardScore": 60.0
+                    },
+                    "themeScore": {
+                        "aiScore": 10.0,
+                        "fashionScore": 90.0,
+                        "governanceScore": 30.0,
+                        "sportsGamingScore": 60.0,
+                        "securityPrivacyScore": 20.0
+                    }
+                },
+                "cbjd9": {
+                    "judgeId": "cbjd9",
+                    "roleScore": {
+                        "softwareScore": 1.0,
+                        "hardwareScore": 5.0,
+                        "visualArtScore": 10.0,
+                        "musicScore": 7.0,
+                        "wildCardScore": 3.0
+                    },
+                    "themeScore": {
+                        "aiScore": 2.0,
+                        "fashionScore": 2.0,
+                        "governanceScore": 0.0,
+                        "sportsGamingScore": 0.0,
+                        "securityPrivacyScore": 0.0
+                    }
+                },
+                "cbjd20": {
+                    "judgeId": "cbjd20",
+                    "roleScore": {
+                        "softwareScore": 100.0,
+                        "hardwareScore": 100.0,
+                        "visualArtScore": 100.0,
+                        "musicScore": 100.0,
+                        "wildCardScore": 100.0
+                    },
+                    "themeScore": {
+                        "aiScore": 0.0,
+                        "fashionScore": 100.0,
+                        "governanceScore": 0.0,
+                        "sportsGamingScore": 0.0,
+                        "securityPrivacyScore": 0.0
+                    }
+                },
+                "cbjd11": {
+                    "judgeId": "cbjd11",
+                    "roleScore": {
+                        "softwareScore": 50.0,
+                        "hardwareScore": 60.0,
+                        "visualArtScore": 75.0,
+                        "musicScore": 0.0,
+                        "wildCardScore": 70.0
+                    },
+                    "themeScore": {
+                        "aiScore": 0.0,
+                        "fashionScore": 80.0,
+                        "governanceScore": 60.0,
+                        "sportsGamingScore": 0.0,
+                        "securityPrivacyScore": 60.0
+                    }
+                },
+                "cbjd14": {
+                    "judgeId": "cbjd14",
+                    "roleScore": {
+                        "softwareScore": 100.0,
+                        "hardwareScore": 100.0,
+                        "visualArtScore": 100.0,
+                        "musicScore": 80.0,
+                        "wildCardScore": 50.0
+                    },
+                    "themeScore": {
+                        "aiScore": 0.0,
+                        "fashionScore": 100.0,
+                        "governanceScore": 100.0,
+                        "sportsGamingScore": 100.0,
+                        "securityPrivacyScore": 0.0
+                    }
+                },
+                "cbjd8": {
+                    "judgeId": "cbjd8",
+                    "roleScore": {
+                        "softwareScore": 90.0,
+                        "hardwareScore": 90.0,
+                        "visualArtScore": 88.0,
+                        "musicScore": 85.0,
+                        "wildCardScore": 95.0
+                    },
+                    "themeScore": {
+                        "aiScore": 0.0,
+                        "fashionScore": 50.0,
+                        "governanceScore": 0.0,
+                        "sportsGamingScore": 40.0,
+                        "securityPrivacyScore": 0.0
+                    }
+                },
+                "cbjd4": {
+                    "judgeId": "cbjd4",
+                    "roleScore": {
+                        "softwareScore": 90.0,
+                        "hardwareScore": 70.0,
+                        "visualArtScore": 100.0,
+                        "musicScore": 90.0,
+                        "wildCardScore": 70.0
+                    },
+                    "themeScore": {
+                        "aiScore": 60.0,
+                        "fashionScore": 100.0,
+                        "governanceScore": 50.0,
+                        "sportsGamingScore": 70.0,
+                        "securityPrivacyScore": 30.0
+                    }
+                },
+                "cbjd5": {
+                    "judgeId": "cbjd5",
+                    "roleScore": {
+                        "softwareScore": 90.0,
+                        "hardwareScore": 90.0,
+                        "visualArtScore": 100.0,
+                        "musicScore": 0.0,
+                        "wildCardScore": 90.0
+                    },
+                    "themeScore": {
+                        "aiScore": 0.0,
+                        "fashionScore": 100.0,
+                        "governanceScore": 40.0,
+                        "sportsGamingScore": 0.0,
+                        "securityPrivacyScore": 0.0
+                    }
+                },
+                "cbjd7": {
+                    "judgeId": "cbjd7",
+                    "roleScore": {
+                        "softwareScore": 75.0,
+                        "hardwareScore": 75.0,
+                        "visualArtScore": 80.0,
+                        "musicScore": 65.0,
+                        "wildCardScore": 85.0
+                    },
+                    "themeScore": {
+                        "aiScore": 50.0,
+                        "fashionScore": 100.0,
+                        "governanceScore": 80.0,
+                        "sportsGamingScore": 90.0,
+                        "securityPrivacyScore": 80.0
+                    }
+                },
+                "cbjd10": {
+                    "judgeId": "cbjd10",
+                    "roleScore": {
+                        "softwareScore": 75.0,
+                        "hardwareScore": 80.0,
+                        "visualArtScore": 100.0,
+                        "musicScore": 75.0,
+                        "wildCardScore": 100.0
+                    },
+                    "themeScore": {
+                        "aiScore": 0.0,
+                        "fashionScore": 75.0,
+                        "governanceScore": 0.0,
+                        "sportsGamingScore": 75.0,
+                        "securityPrivacyScore": 75.0
+                    }
+                },
+                "cbjd2": {
+                    "judgeId": "cbjd2",
+                    "roleScore": {
+                        "softwareScore": 100.0,
+                        "hardwareScore": 50.0,
+                        "visualArtScore": 75.0,
+                        "musicScore": 30.0,
+                        "wildCardScore": 50.0
+                    },
+                    "themeScore": {
+                        "aiScore": 50.0,
+                        "fashionScore": 100.0,
+                        "governanceScore": 100.0,
+                        "sportsGamingScore": 30.0,
+                        "securityPrivacyScore": 20.0
+                    }
+                },
+                "cbjd6": {
+                    "judgeId": "cbjd6",
+                    "roleScore": {
+                        "softwareScore": 60.0,
+                        "hardwareScore": 60.0,
+                        "visualArtScore": 100.0,
+                        "musicScore": 80.0,
+                        "wildCardScore": 60.0
+                    },
+                    "themeScore": {
+                        "aiScore": 0.0,
+                        "fashionScore": 100.0,
+                        "governanceScore": 0.0,
+                        "sportsGamingScore": 0.0,
+                        "securityPrivacyScore": 0.0
+                    }
+                }
+            }
+        },
+        {
+            "teamId": "team2",
+            "judgeScores": {
+                "cbjd1": {
+                    "judgeId": "cbjd1",
+                    "roleScore": {
+                        "softwareScore": 80.0,
+                        "hardwareScore": 80.0,
+                        "visualArtScore": 0.0,
+                        "musicScore": 0.0,
+                        "wildCardScore": 0.0
+                    },
+                    "themeScore": {
+                        "aiScore": 0.0,
+                        "fashionScore": 0.0,
+                        "governanceScore": 0.0,
+                        "sportsGamingScore": 0.0,
+                        "securityPrivacyScore": 0.0
+                    }
+                },
+                "cbjd3": {
+                    "judgeId": "cbjd3",
+                    "roleScore": {
+                        "softwareScore": 85.0,
+                        "hardwareScore": 20.0,
+                        "visualArtScore": 100.0,
+                        "musicScore": 98.0,
+                        "wildCardScore": 57.0
+                    },
+                    "themeScore": {
+                        "aiScore": 100.0,
+                        "fashionScore": 0.0,
+                        "governanceScore": 0.0,
+                        "sportsGamingScore": 0.0,
+                        "securityPrivacyScore": 0.0
+                    }
+                },
+                "cbjd23": {
+                    "judgeId": "cbjd23",
+                    "roleScore": {
+                        "softwareScore": 70.0,
+                        "hardwareScore": 30.0,
+                        "visualArtScore": 40.0,
+                        "musicScore": 80.0,
+                        "wildCardScore": 10.0
+                    },
+                    "themeScore": {
+                        "aiScore": 50.0,
+                        "fashionScore": 0.0,
+                        "governanceScore": 50.0,
+                        "sportsGamingScore": 50.0,
+                        "securityPrivacyScore": 0.0
+                    }
+                },
+                "cbjd11": {
+                    "judgeId": "cbjd11",
+                    "roleScore": {
+                        "softwareScore": 60.0,
+                        "hardwareScore": 85.0,
+                        "visualArtScore": 99.0,
+                        "musicScore": 71.0,
+                        "wildCardScore": 50.0
+                    },
+                    "themeScore": {
+                        "aiScore": 50.0,
+                        "fashionScore": 75.0,
+                        "governanceScore": 45.0,
+                        "sportsGamingScore": 0.0,
+                        "securityPrivacyScore": 60.0
+                    }
+                },
+                "cbjd8": {
+                    "judgeId": "cbjd8",
+                    "roleScore": {
+                        "softwareScore": 90.0,
+                        "hardwareScore": 85.0,
+                        "visualArtScore": 85.0,
+                        "musicScore": 95.0,
+                        "wildCardScore": 90.0
+                    },
+                    "themeScore": {
+                        "aiScore": 99.0,
+                        "fashionScore": 70.0,
+                        "governanceScore": 0.0,
+                        "sportsGamingScore": 0.0,
+                        "securityPrivacyScore": 0.0
+                    }
+                },
+                "cbjd4": {
+                    "judgeId": "cbjd4",
+                    "roleScore": {
+                        "softwareScore": 90.0,
+                        "hardwareScore": 100.0,
+                        "visualArtScore": 70.0,
+                        "musicScore": 100.0,
+                        "wildCardScore": 70.0
+                    },
+                    "themeScore": {
+                        "aiScore": 70.0,
+                        "fashionScore": 50.0,
+                        "governanceScore": 10.0,
+                        "sportsGamingScore": 20.0,
+                        "securityPrivacyScore": 38.0
+                    }
+                },
+                "cbjd20": {
+                    "judgeId": "cbjd20",
+                    "roleScore": {
+                        "softwareScore": 100.0,
+                        "hardwareScore": 100.0,
+                        "visualArtScore": 100.0,
+                        "musicScore": 100.0,
+                        "wildCardScore": 100.0
+                    },
+                    "themeScore": {
+                        "aiScore": 100.0,
+                        "fashionScore": 0.0,
+                        "governanceScore": 0.0,
+                        "sportsGamingScore": 0.0,
+                        "securityPrivacyScore": 0.0
+                    }
+                },
+                "cbjd10": {
+                    "judgeId": "cbjd10",
+                    "roleScore": {
+                        "softwareScore": 100.0,
+                        "hardwareScore": 50.0,
+                        "visualArtScore": 75.0,
+                        "musicScore": 100.0,
+                        "wildCardScore": 100.0
+                    },
+                    "themeScore": {
+                        "aiScore": 100.0,
+                        "fashionScore": 100.0,
+                        "governanceScore": 25.0,
+                        "sportsGamingScore": 25.0,
+                        "securityPrivacyScore": 25.0
+                    }
+                },
+                "cbjd14": {
+                    "judgeId": "cbjd14",
+                    "roleScore": {
+                        "softwareScore": 100.0,
+                        "hardwareScore": 80.0,
+                        "visualArtScore": 80.0,
+                        "musicScore": 100.0,
+                        "wildCardScore": 80.0
+                    },
+                    "themeScore": {
+                        "aiScore": 100.0,
+                        "fashionScore": 0.0,
+                        "governanceScore": 0.0,
+                        "sportsGamingScore": 100.0,
+                        "securityPrivacyScore": 0.0
+                    }
+                },
+                "cbjd5": {
+                    "judgeId": "cbjd5",
+                    "roleScore": {
+                        "softwareScore": 85.0,
+                        "hardwareScore": 73.0,
+                        "visualArtScore": 90.0,
+                        "musicScore": 100.0,
+                        "wildCardScore": 25.0
+                    },
+                    "themeScore": {
+                        "aiScore": 100.0,
+                        "fashionScore": 0.0,
+                        "governanceScore": 78.0,
+                        "sportsGamingScore": 0.0,
+                        "securityPrivacyScore": 70.0
+                    }
+                },
+                "cbjd7": {
+                    "judgeId": "cbjd7",
+                    "roleScore": {
+                        "softwareScore": 100.0,
+                        "hardwareScore": 90.0,
+                        "visualArtScore": 95.0,
+                        "musicScore": 100.0,
+                        "wildCardScore": 100.0
+                    },
+                    "themeScore": {
+                        "aiScore": 90.0,
+                        "fashionScore": 95.0,
+                        "governanceScore": 95.0,
+                        "sportsGamingScore": 100.0,
+                        "securityPrivacyScore": 100.0
+                    }
+                },
+                "cbjd2": {
+                    "judgeId": "cbjd2",
+                    "roleScore": {
+                        "softwareScore": 100.0,
+                        "hardwareScore": 75.0,
+                        "visualArtScore": 10.0,
+                        "musicScore": 100.0,
+                        "wildCardScore": 100.0
+                    },
+                    "themeScore": {
+                        "aiScore": 100.0,
+                        "fashionScore": 10.0,
+                        "governanceScore": 10.0,
+                        "sportsGamingScore": 30.0,
+                        "securityPrivacyScore": 20.0
+                    }
+                },
+                "cbjd6": {
+                    "judgeId": "cbjd6",
+                    "roleScore": {
+                        "softwareScore": 100.0,
+                        "hardwareScore": 20.0,
+                        "visualArtScore": 100.0,
+                        "musicScore": 100.0,
+                        "wildCardScore": 0.0
+                    },
+                    "themeScore": {
+                        "aiScore": 70.0,
+                        "fashionScore": 0.0,
+                        "governanceScore": 20.0,
+                        "sportsGamingScore": 0.0,
+                        "securityPrivacyScore": 100.0
+                    }
+                },
+                "cbjd9": {
+                    "judgeId": "cbjd9",
+                    "roleScore": {
+                        "softwareScore": 90.0,
+                        "hardwareScore": 95.0,
+                        "visualArtScore": 80.0,
+                        "musicScore": 99.0,
+                        "wildCardScore": 90.0
+                    },
+                    "themeScore": {
+                        "aiScore": 99.0,
+                        "fashionScore": 10.0,
+                        "governanceScore": 10.0,
+                        "sportsGamingScore": 10.0,
+                        "securityPrivacyScore": 10.0
+                    }
+                }
+            }
+        },
+        {
+            "teamId": "team3",
+            "judgeScores": {
+                "cbjd1": {
+                    "judgeId": "cbjd1",
+                    "roleScore": {
+                        "softwareScore": 80.0,
+                        "hardwareScore": 80.0,
+                        "visualArtScore": 0.0,
+                        "musicScore": 0.0,
+                        "wildCardScore": 0.0
+                    },
+                    "themeScore": {
+                        "aiScore": 0.0,
+                        "fashionScore": 0.0,
+                        "governanceScore": 0.0,
+                        "sportsGamingScore": 0.0,
+                        "securityPrivacyScore": 0.0
+                    }
+                },
+                "cbjd23": {
+                    "judgeId": "cbjd23",
+                    "roleScore": {
+                        "softwareScore": 20.0,
+                        "hardwareScore": 20.0,
+                        "visualArtScore": 60.0,
+                        "musicScore": 0.0,
+                        "wildCardScore": 30.0
+                    },
+                    "themeScore": {
+                        "aiScore": 0.0,
+                        "fashionScore": 30.0,
+                        "governanceScore": 20.0,
+                        "sportsGamingScore": 100.0,
+                        "securityPrivacyScore": 20.0
+                    }
+                },
+                "cbjd4": {
+                    "judgeId": "cbjd4",
+                    "roleScore": {
+                        "softwareScore": 90.0,
+                        "hardwareScore": 100.0,
+                        "visualArtScore": 50.0,
+                        "musicScore": 50.0,
+                        "wildCardScore": 80.0
+                    },
+                    "themeScore": {
+                        "aiScore": 20.0,
+                        "fashionScore": 40.0,
+                        "governanceScore": 90.0,
+                        "sportsGamingScore": 90.0,
+                        "securityPrivacyScore": 60.0
+                    }
+                },
+                "cbjd11": {
+                    "judgeId": "cbjd11",
+                    "roleScore": {
+                        "softwareScore": 40.0,
+                        "hardwareScore": 90.0,
+                        "visualArtScore": 80.0,
+                        "musicScore": 70.0,
+                        "wildCardScore": 80.0
+                    },
+                    "themeScore": {
+                        "aiScore": 0.0,
+                        "fashionScore": 90.0,
+                        "governanceScore": 0.0,
+                        "sportsGamingScore": 95.0,
+                        "securityPrivacyScore": 0.0
+                    }
+                },
+                "cbjd20": {
+                    "judgeId": "cbjd20",
+                    "roleScore": {
+                        "softwareScore": 90.0,
+                        "hardwareScore": 90.0,
+                        "visualArtScore": 95.0,
+                        "musicScore": 95.0,
+                        "wildCardScore": 0.0
+                    },
+                    "themeScore": {
+                        "aiScore": 0.0,
+                        "fashionScore": 0.0,
+                        "governanceScore": 100.0,
+                        "sportsGamingScore": 100.0,
+                        "securityPrivacyScore": 0.0
+                    }
+                },
+                "cbjd10": {
+                    "judgeId": "cbjd10",
+                    "roleScore": {
+                        "softwareScore": 100.0,
+                        "hardwareScore": 100.0,
+                        "visualArtScore": 100.0,
+                        "musicScore": 50.0,
+                        "wildCardScore": 100.0
+                    },
+                    "themeScore": {
+                        "aiScore": 0.0,
+                        "fashionScore": 0.0,
+                        "governanceScore": 0.0,
+                        "sportsGamingScore": 100.0,
+                        "securityPrivacyScore": 0.0
+                    }
+                },
+                "cbjd14": {
+                    "judgeId": "cbjd14",
+                    "roleScore": {
+                        "softwareScore": 80.0,
+                        "hardwareScore": 100.0,
+                        "visualArtScore": 60.0,
+                        "musicScore": 20.0,
+                        "wildCardScore": 80.0
+                    },
+                    "themeScore": {
+                        "aiScore": 0.0,
+                        "fashionScore": 0.0,
+                        "governanceScore": 0.0,
+                        "sportsGamingScore": 80.0,
+                        "securityPrivacyScore": 0.0
+                    }
+                },
+                "cbjd8": {
+                    "judgeId": "cbjd8",
+                    "roleScore": {
+                        "softwareScore": 65.0,
+                        "hardwareScore": 90.0,
+                        "visualArtScore": 70.0,
+                        "musicScore": 75.0,
+                        "wildCardScore": 80.0
+                    },
+                    "themeScore": {
+                        "aiScore": 0.0,
+                        "fashionScore": 20.0,
+                        "governanceScore": 0.0,
+                        "sportsGamingScore": 80.0,
+                        "securityPrivacyScore": 0.0
+                    }
+                },
+                "cbjd5": {
+                    "judgeId": "cbjd5",
+                    "roleScore": {
+                        "softwareScore": 70.0,
+                        "hardwareScore": 65.0,
+                        "visualArtScore": 0.0,
+                        "musicScore": 0.0,
+                        "wildCardScore": 59.0
+                    },
+                    "themeScore": {
+                        "aiScore": 0.0,
+                        "fashionScore": 0.0,
+                        "governanceScore": 70.0,
+                        "sportsGamingScore": 100.0,
+                        "securityPrivacyScore": 40.0
+                    }
+                },
+                "cbjd7": {
+                    "judgeId": "cbjd7",
+                    "roleScore": {
+                        "softwareScore": 85.0,
+                        "hardwareScore": 100.0,
+                        "visualArtScore": 95.0,
+                        "musicScore": 80.0,
+                        "wildCardScore": 85.0
+                    },
+                    "themeScore": {
+                        "aiScore": 95.0,
+                        "fashionScore": 100.0,
+                        "governanceScore": 90.0,
+                        "sportsGamingScore": 80.0,
+                        "securityPrivacyScore": 85.0
+                    }
+                },
+                "cbjd2": {
+                    "judgeId": "cbjd2",
+                    "roleScore": {
+                        "softwareScore": 100.0,
+                        "hardwareScore": 100.0,
+                        "visualArtScore": 100.0,
+                        "musicScore": 10.0,
+                        "wildCardScore": 75.0
+                    },
+                    "themeScore": {
+                        "aiScore": 100.0,
+                        "fashionScore": 10.0,
+                        "governanceScore": 30.0,
+                        "sportsGamingScore": 100.0,
+                        "securityPrivacyScore": 30.0
+                    }
+                },
+                "cbjd6": {
+                    "judgeId": "cbjd6",
+                    "roleScore": {
+                        "softwareScore": 90.0,
+                        "hardwareScore": 100.0,
+                        "visualArtScore": 80.0,
+                        "musicScore": 80.0,
+                        "wildCardScore": 100.0
+                    },
+                    "themeScore": {
+                        "aiScore": 0.0,
+                        "fashionScore": 0.0,
+                        "governanceScore": 0.0,
+                        "sportsGamingScore": 100.0,
+                        "securityPrivacyScore": 0.0
+                    }
+                },
+                "cbjd3": {
+                    "judgeId": "cbjd3",
+                    "roleScore": {
+                        "softwareScore": 90.0,
+                        "hardwareScore": 100.0,
+                        "visualArtScore": 90.0,
+                        "musicScore": 90.0,
+                        "wildCardScore": 100.0
+                    },
+                    "themeScore": {
+                        "aiScore": 0.0,
+                        "fashionScore": 0.0,
+                        "governanceScore": 0.0,
+                        "sportsGamingScore": 100.0,
+                        "securityPrivacyScore": 0.0
+                    }
+                },
+                "cbjd9": {
+                    "judgeId": "cbjd9",
+                    "roleScore": {
+                        "softwareScore": 60.0,
+                        "hardwareScore": 95.0,
+                        "visualArtScore": 95.0,
+                        "musicScore": 10.0,
+                        "wildCardScore": 70.0
+                    },
+                    "themeScore": {
+                        "aiScore": 20.0,
+                        "fashionScore": 20.0,
+                        "governanceScore": 10.0,
+                        "sportsGamingScore": 10.0,
+                        "securityPrivacyScore": 10.0
+                    }
+                }
+            }
+        },
+        {
+            "teamId": "team4",
+            "judgeScores": {
+                "cbjd1": {
+                    "judgeId": "cbjd1",
+                    "roleScore": {
+                        "softwareScore": 50.0,
+                        "hardwareScore": 80.0,
+                        "visualArtScore": 0.0,
+                        "musicScore": 0.0,
+                        "wildCardScore": 0.0
+                    },
+                    "themeScore": {
+                        "aiScore": 0.0,
+                        "fashionScore": 0.0,
+                        "governanceScore": 0.0,
+                        "sportsGamingScore": 0.0,
+                        "securityPrivacyScore": 0.0
+                    }
+                },
+                "cbjd4": {
+                    "judgeId": "cbjd4",
+                    "roleScore": {
+                        "softwareScore": 90.0,
+                        "hardwareScore": 70.0,
+                        "visualArtScore": 30.0,
+                        "musicScore": 10.0,
+                        "wildCardScore": 90.0
+                    },
+                    "themeScore": {
+                        "aiScore": 20.0,
+                        "fashionScore": 20.0,
+                        "governanceScore": 90.0,
+                        "sportsGamingScore": 20.0,
+                        "securityPrivacyScore": 100.0
+                    }
+                },
+                "cbjd23": {
+                    "judgeId": "cbjd23",
+                    "roleScore": {
+                        "softwareScore": 80.0,
+                        "hardwareScore": 50.0,
+                        "visualArtScore": 0.0,
+                        "musicScore": 0.0,
+                        "wildCardScore": 50.0
+                    },
+                    "themeScore": {
+                        "aiScore": 0.0,
+                        "fashionScore": 0.0,
+                        "governanceScore": 70.0,
+                        "sportsGamingScore": 10.0,
+                        "securityPrivacyScore": 100.0
+                    }
+                },
+                "cbjd11": {
+                    "judgeId": "cbjd11",
+                    "roleScore": {
+                        "softwareScore": 80.0,
+                        "hardwareScore": 60.0,
+                        "visualArtScore": 0.0,
+                        "musicScore": 0.0,
+                        "wildCardScore": 70.0
+                    },
+                    "themeScore": {
+                        "aiScore": 0.0,
+                        "fashionScore": 0.0,
+                        "governanceScore": 95.0,
+                        "sportsGamingScore": 0.0,
+                        "securityPrivacyScore": 90.0
+                    }
+                },
+                "cbjd14": {
+                    "judgeId": "cbjd14",
+                    "roleScore": {
+                        "softwareScore": 50.0,
+                        "hardwareScore": 100.0,
+                        "visualArtScore": 20.0,
+                        "musicScore": 0.0,
+                        "wildCardScore": 100.0
+                    },
+                    "themeScore": {
+                        "aiScore": 0.0,
+                        "fashionScore": 0.0,
+                        "governanceScore": 20.0,
+                        "sportsGamingScore": 0.0,
+                        "securityPrivacyScore": 100.0
+                    }
+                },
+                "cbjd20": {
+                    "judgeId": "cbjd20",
+                    "roleScore": {
+                        "softwareScore": 100.0,
+                        "hardwareScore": 100.0,
+                        "visualArtScore": 0.0,
+                        "musicScore": 0.0,
+                        "wildCardScore": 0.0
+                    },
+                    "themeScore": {
+                        "aiScore": 0.0,
+                        "fashionScore": 0.0,
+                        "governanceScore": 0.0,
+                        "sportsGamingScore": 0.0,
+                        "securityPrivacyScore": 100.0
+                    }
+                },
+                "cbjd8": {
+                    "judgeId": "cbjd8",
+                    "roleScore": {
+                        "softwareScore": 85.0,
+                        "hardwareScore": 90.0,
+                        "visualArtScore": 10.0,
+                        "musicScore": 0.0,
+                        "wildCardScore": 70.0
+                    },
+                    "themeScore": {
+                        "aiScore": 20.0,
+                        "fashionScore": 0.0,
+                        "governanceScore": 80.0,
+                        "sportsGamingScore": 0.0,
+                        "securityPrivacyScore": 90.0
+                    }
+                },
+                "cbjd3": {
+                    "judgeId": "cbjd3",
+                    "roleScore": {
+                        "softwareScore": 0.0,
+                        "hardwareScore": 100.0,
+                        "visualArtScore": 20.0,
+                        "musicScore": 0.0,
+                        "wildCardScore": 100.0
+                    },
+                    "themeScore": {
+                        "aiScore": 0.0,
+                        "fashionScore": 0.0,
+                        "governanceScore": 0.0,
+                        "sportsGamingScore": 0.0,
+                        "securityPrivacyScore": 100.0
+                    }
+                },
+                "cbjd5": {
+                    "judgeId": "cbjd5",
+                    "roleScore": {
+                        "softwareScore": 100.0,
+                        "hardwareScore": 100.0,
+                        "visualArtScore": 0.0,
+                        "musicScore": 0.0,
+                        "wildCardScore": 100.0
+                    },
+                    "themeScore": {
+                        "aiScore": 0.0,
+                        "fashionScore": 0.0,
+                        "governanceScore": 100.0,
+                        "sportsGamingScore": 0.0,
+                        "securityPrivacyScore": 100.0
+                    }
+                },
+                "cbjd7": {
+                    "judgeId": "cbjd7",
+                    "roleScore": {
+                        "softwareScore": 80.0,
+                        "hardwareScore": 90.0,
+                        "visualArtScore": 85.0,
+                        "musicScore": 75.0,
+                        "wildCardScore": 80.0
+                    },
+                    "themeScore": {
+                        "aiScore": 80.0,
+                        "fashionScore": 80.0,
+                        "governanceScore": 90.0,
+                        "sportsGamingScore": 80.0,
+                        "securityPrivacyScore": 100.0
+                    }
+                },
+                "cbjd10": {
+                    "judgeId": "cbjd10",
+                    "roleScore": {
+                        "softwareScore": 10.0,
+                        "hardwareScore": 76.0,
+                        "visualArtScore": 20.0,
+                        "musicScore": 0.0,
+                        "wildCardScore": 50.0
+                    },
+                    "themeScore": {
+                        "aiScore": 0.0,
+                        "fashionScore": 0.0,
+                        "governanceScore": 0.0,
+                        "sportsGamingScore": 0.0,
+                        "securityPrivacyScore": 25.0
+                    }
+                },
+                "cbjd2": {
+                    "judgeId": "cbjd2",
+                    "roleScore": {
+                        "softwareScore": 100.0,
+                        "hardwareScore": 100.0,
+                        "visualArtScore": 30.0,
+                        "musicScore": 10.0,
+                        "wildCardScore": 100.0
+                    },
+                    "themeScore": {
+                        "aiScore": 100.0,
+                        "fashionScore": 10.0,
+                        "governanceScore": 50.0,
+                        "sportsGamingScore": 10.0,
+                        "securityPrivacyScore": 100.0
+                    }
+                },
+                "cbjd6": {
+                    "judgeId": "cbjd6",
+                    "roleScore": {
+                        "softwareScore": 100.0,
+                        "hardwareScore": 90.0,
+                        "visualArtScore": 0.0,
+                        "musicScore": -2.0,
+                        "wildCardScore": 100.0
+                    },
+                    "themeScore": {
+                        "aiScore": 0.0,
+                        "fashionScore": 0.0,
+                        "governanceScore": 0.0,
+                        "sportsGamingScore": 100.0,
+                        "securityPrivacyScore": 100.0
+                    }
+                },
+                "cbjd9": {
+                    "judgeId": "cbjd9",
+                    "roleScore": {
+                        "softwareScore": 95.0,
+                        "hardwareScore": 95.0,
+                        "visualArtScore": 60.0,
+                        "musicScore": 0.0,
+                        "wildCardScore": 10.0
+                    },
+                    "themeScore": {
+                        "aiScore": 10.0,
+                        "fashionScore": 10.0,
+                        "governanceScore": 10.0,
+                        "sportsGamingScore": 10.0,
+                        "securityPrivacyScore": 99.0
+                    }
+                }
+            }
+        }
+    ]
+}

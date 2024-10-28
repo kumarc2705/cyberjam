@@ -26,7 +26,7 @@ public class JudgeAdminController {
             // Read the existing data from the constants file
             File file = new File(CONSTANTS_FILE_PATH);
             Map<String, Object> constants = objectMapper.readValue(file, Map.class);
-
+            System.out.println(newJudge.getRoleWeightage().getSoftwareWeight());
             // Deserialize the list of judges
             List<Judge> judges = objectMapper.convertValue(constants.get("judges"), new TypeReference<List<Judge>>() {});
 
